@@ -95,11 +95,11 @@ const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-md p-3 w-56 space-y-2"
+                  className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-md p-3 w-56 space-y-2 divide-y divide-[#9bcb3b]"
                 >
                   <Link
                     to="/waldorf-education"
-                    className="block hover:text-primary-dark transition duration-150"
+                    className="block hover:text-primary-dark  transition duration-150"
                   >
                     Waldorf Education
                   </Link>
@@ -127,7 +127,7 @@ const Navbar = () => {
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 10 }}
                           transition={{ duration: 0.3 }}
-                          className="absolute left-full top-0 hidden group-hover/program:block bg-white shadow-lg rounded-md p-3 w-44 space-y-2"
+                          className="absolute left-full top-0 hidden group-hover/program:block bg-white shadow-lg rounded-md p-3 w-44 space-y-2 divide-y divide-[#9bcb3b]"
                         >
                           <Link
                             to="/playgroup"
@@ -158,7 +158,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="hover:text-primary-dark  duration-150 transition"
+            className="hover:text-primary-dark duration-150 transition"
           >
             Contact Us
           </Link>
