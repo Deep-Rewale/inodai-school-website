@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #3f3c77;
+  --color-primary-dark: #2f2c5e;
+  --color-accent: #9bcb3b;
+  --color-page-bg: #f8f9fc;
+  --color-text-main: #333333;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Manrope", sans-serif;
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  /* Background colors */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-primary-dark {
+    background-color: var(--color-primary-dark);
+  }
+
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+
+  .bg-page-bg {
+    background-color: var(--color-page-bg);
+  }
+
+  /* Text colors */
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-primary-dark {
+    color: var(--color-primary-dark);
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .text-main {
+    color: var(--color-text-main);
+  }
+
+   .hover\:bg-primary-dark:hover {
+    background-color: var(--color-primary-dark);
+  }
+
+  .hover\:text-primary-dark:hover {
+    color: var(--color-primary-dark);
+  }
+}
