@@ -1,8 +1,12 @@
 import React from 'react'
+import Hero from '../components/Hero'
+import { div } from 'framer-motion/client'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className=''>
+      <Hero />
+    </div>
   )
 }
 

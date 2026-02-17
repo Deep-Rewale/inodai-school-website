@@ -11,7 +11,7 @@ const Navbar = () => {
   const [programsOpen, setProgramsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white shadow-md">
+    <nav className="w-full bg-white shadow-md z-50 fixed top 0">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* LEFT - LOGO */}
         <div className="flex items-center">
@@ -33,7 +33,7 @@ const Navbar = () => {
           <div
             onMouseEnter={() => setAboutOpen(true)}
             onMouseLeave={() => setAboutOpen(false)}
-            className="relative group"
+            className="relative group z-50"
           >
             <span className="cursor-pointer hover:text-primary-dark transition duration-150">
               <Link className="flex items-center" to="/about">
@@ -81,7 +81,7 @@ const Navbar = () => {
               setPagesOpen(false);
               setProgramsOpen(false);
             }}
-            className="relative group"
+            className="relative group z-50"
           >
             <span className=" flex  items-center cursor-pointer hover:text-primary-dark transition duration-150">
               Pages
