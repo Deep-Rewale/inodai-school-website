@@ -60,4 +60,8 @@
   .hover\:text-primary-dark:hover {
     color: var(--color-primary-dark);
   }
+
+   .hover\:bg-accent:hover {
+    background-color: var(--color-accent);
+  }
 }
