@@ -1,9 +1,9 @@
 import { title } from "framer-motion/client";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import herobg1 from "../assets/hero-section-img/hero-bg-1.jpg";
-import herobg2 from "../assets/hero-section-img/hero-bg-2.jpg";
-import herobg3 from "../assets/hero-section-img/hero-bg-3.jpg";
+import herobg1 from "../../assets/home page/hero-section-img/hero-bg-1.jpg";
+import herobg2 from "../../assets/home page/hero-section-img/hero-bg-2.jpg";
+import herobg3 from "../../assets/home page/hero-section-img/hero-bg-3.jpg";
 import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
 import { motion, AnimatePresence } from "framer-motion";

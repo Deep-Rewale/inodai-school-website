@@ -64,4 +64,7 @@
    .hover\:bg-accent:hover {
     background-color: var(--color-accent);
   }
+  .hover\:text-accent:hover {
+    color: var(--color-accent);
+  }
 }
