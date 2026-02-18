@@ -8,7 +8,6 @@ import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 const slides = [
   {
     title: "Education That Liberates",
@@ -22,9 +21,10 @@ const slides = [
     img: herobg2,
   },
 
-   {
-    title:"Where Imagination Meets Learning",
-    subtite:"At Inodai Waldorf School, we nurture curiosity, creativity, and confidence in every child.",
+  {
+    title: "Where Imagination Meets Learning",
+    subtite:
+      "At Inodai Waldorf School, we nurture curiosity, creativity, and confidence in every child.",
     img: herobg3,
   },
 ];
@@ -102,11 +102,23 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* buttons for left and right */}
-      <motion.button className="absolute left-6 top-1/2 -translate-y-1/2 text-white text-4xl border rounded-full p-2" whileHover={{scale:1.3}} whileTap={{scale:0.5}} transition={{type: "spring", stiffness: 300 }}  onClick={prevSLider}>
+      <motion.button
+        className="absolute left-6 top-1/2 -translate-y-1/2 text-white text-4xl border rounded-full p-2 cursor-pointer hover:text-accent"
+        whileHover={{ scale: 1.3 }}
+        whileTap={{ scale: 0.5 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        onClick={prevSLider}
+      >
         <SlArrowLeft />
       </motion.button>
-      <motion.button whileHover={{scale:1.3}} whileTap={{scale:0.5}} transition={{type:"spring", stiffness:200 }} className="absolute right-6 top-1/2 -translate-y-1/2 text-white text-4xl border rounded-full p-2" onClick={nextSLider}>
-        <SlArrowRight  />
+      <motion.button
+        whileHover={{ scale: 1.3 }}
+        whileTap={{ scale: 0.5 }}
+        transition={{ type: "spring", stiffness: 200 }}
+        className="absolute right-6 top-1/2 -translate-y-1/2 text-white text-4xl border rounded-full p-2 cursor-pointer hover:text-accent"
+        onClick={nextSLider}
+      >
+        <SlArrowRight />
       </motion.button>
     </div>
   );
