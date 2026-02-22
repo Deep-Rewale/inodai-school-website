@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Board from "./pages/Board";
-import Courses from "./pages/Courses";
+import Programs from "./pages/Programs";
 import Events from "./pages/Events";
 import WaldorfEducation from "./pages/WaldorfEducation";
 import WaldorfFaq from "./pages/WaldorfFaq";
@@ -14,12 +14,14 @@ import Daycares from "./pages/Daycars";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
+import CustomCursor from "./components/CustomCursor";
 
 export const App = () => {
   return (
     // Used React router for routes handling
    <div className="h-screen w-full">
    <BrowserRouter>
+   <CustomCursor/>
     <Navbar />
 
       <Routes>
@@ -28,7 +30,7 @@ export const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/board" element={<Board />} />
 
-        <Route path="/courses" element={<Courses />} />
+        <Route path="/programs" element={<Programs />} />
         <Route path="/events" element={<Events />} />
 
         <Route path="/waldorf-education" element={<WaldorfEducation />} />

@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@layer base {
+  body {
+    @apply cursor-none;
+  }
+   *, a, button {
+    cursor: none !important;
+  }
+}
 :root {
   --color-primary: #3f3c77;
   --color-primary-dark: #2f2c5e;

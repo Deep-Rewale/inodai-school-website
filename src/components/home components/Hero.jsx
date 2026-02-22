@@ -10,19 +10,19 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
-    title: "Education That Liberates",
+    title: "Joyful Learning Begins Here",
     subtite: "Inodai Waldorf School nurtures creativity and imagination.",
     img: herobg1,
   },
   {
-    title: "Together We'll Explore New Things",
+    title: "Creativity That Inspires Growth",
     subtite:
       "We believe everyone should have the opportunity to grow through education.",
     img: herobg2,
   },
 
   {
-    title: "Where Imagination Meets Learning",
+    title: "Building Curious & Confident Minds",
     subtite:
       "At Inodai Waldorf School, we nurture curiosity, creativity, and confidence in every child.",
     img: herobg3,
@@ -73,24 +73,24 @@ const Hero = () => {
           <div className="absolute inset-0 flex items-center">
             <div className=" mx-30 text-white">
               <motion.h1
-                initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                initial={{ x: 30, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
                 className="text-5xl font-heading font-bold leading-tight"
               >
                 {slides[index].title}
               </motion.h1>
               <motion.p
-                initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                initial={{ x: 30, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
                 className="mt-3 text-lg font-body"
               >
                 {slides[index].subtite}
               </motion.p>
               <motion.button
-                initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                initial={{ x: 30, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.7 }}
                 className="px-6 py-3 bg-accent rounded-md mt-4 font-semibold hover:bg-primary-dark transition cursor-pointer"
               >

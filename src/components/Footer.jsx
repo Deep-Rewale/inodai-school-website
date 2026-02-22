@@ -4,7 +4,7 @@ import schoolLogo from "../assets/School-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary px-16 py-8">
+    <footer className="bg-primary px-16 py-8 overflow-x-hidden">
       <div className="max-w-7xl  grid grid-cols-4 text-white mx-auto gap-12">
         {/* column 1 */}
         <div className="column1 space-y-3">
@@ -34,8 +34,8 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/courses" className="hover:text-accent transition">
-                Courses
+              <Link to="/programs" className="hover:text-accent transition">
+                Programs
               </Link>
             </li>
             <li>
@@ -82,7 +82,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-white/20 mt-12 pt-3 text-center text-sm text-gray-300">
-       ©{new Date().getFullYear()} Inodai Waldorf School. All rights reserved.</div>
+        ©{new Date().getFullYear()} Inodai Waldorf School. All rights reserved.
+      </div>
     </footer>
   );
 };

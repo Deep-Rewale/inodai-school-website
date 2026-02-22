@@ -11,12 +11,12 @@ const Navbar = () => {
   const [programsOpen, setProgramsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white shadow-md z-50 fixed top 0">
+    <nav className="w-full bg-white shadow-md z-40 fixed top 0  ">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* LEFT - LOGO */}
         <div className="flex items-center">
-          <Link to="/">
-            <img src={Logo} alt="Inodai Logo" className="h-13 object-contain" />
+          <Link to="/" className="cursor-none">
+            <img src={Logo} alt="Inodai Logo" className="h-15 object-contain" />
           </Link>
         </div>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
             onMouseLeave={() => setAboutOpen(false)}
             className="relative group z-50"
           >
-            <span className="cursor-pointer hover:text-primary-dark transition duration-150">
+            <span className="hover:text-primary-dark transition duration-150">
               <Link className="flex items-center" to="/about">
                 About Us <img className="h-5" src={svg} alt="" />
               </Link>
@@ -61,10 +61,10 @@ const Navbar = () => {
           </div>
 
           <Link
-            to="/courses"
+            to="/programs"
             className="hover:text-primary-dark transition duration-150"
           >
-            Courses
+            Programs
           </Link>
 
           <Link
@@ -83,8 +83,8 @@ const Navbar = () => {
             }}
             className="relative group z-50"
           >
-            <span className=" flex  items-center cursor-pointer hover:text-primary-dark transition duration-150">
-              Pages
+            <span className=" flex  items-center  hover:text-primary-dark transition duration-150">
+              Explore Waldorf
               <img className="h-5" src={svg} alt="" />
             </span>
 
@@ -117,7 +117,7 @@ const Navbar = () => {
                     onMouseLeave={() => setProgramsOpen(false)}
                     className="relative group/program"
                   >
-                    <span className="flex  items-center cursor-pointer">
+                    <span className="flex  items-center ">
                       Programs Offered <img className="h-5" src={svg} alt="" />
                     </span>
                     <AnimatePresence>
@@ -160,7 +160,7 @@ const Navbar = () => {
             to="/contact"
             className="hover:text-primary-dark duration-150 transition"
           >
-            Contact Us
+            Contact
           </Link>
         </div>
 

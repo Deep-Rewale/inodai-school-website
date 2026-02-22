@@ -1,50 +1,80 @@
-import { section } from "framer-motion/client";
+import { motion } from "framer-motion";
 import React from "react";
 import whywe from "../../assets/whywe/whywe.jpg";
+import bgImage from "../../assets/whywe/why-bg.png"
 
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.25
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" }
+  }
+};
 const WhyWaldorf = () => {
   return (
-    <section className="py-24 ">
+    < motion.section initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }} className="py-40 h-full  bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="ful-container max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         {/* left img */}
-        <div className="left-content  max-w-xl ">
+        <motion.div  animate={{ y: [0, -10, 0] }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }} className="left-content  max-w-xl ">
           <img
             className="shadow-2xl rounded-2xl w-full"
             src={whywe}
             alt="student studing"
           />
-        </div>
+        </motion.div>
         {/* right content */}
-        <div className="right-content">
-          <h2 className="text-4xl font-heading font-bold text-primary mb-6 leading-tight">
+        <motion.div  variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }} className="right-content">
+          <motion.h2   variants={item} className="text-4xl font-heading font-bold text-primary mb-6 leading-tight">
             Why Waldorf?
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-xl font-body ">
+          </motion.h2>
+          <motion.p  variants={item} className="text-lg text-gray-900 leading-relaxed max-w-xl font-body ">
             {" "}
             Waldorf Education is the fastest growing independent school
             movement...
-          </p>
-          <ul className="space-y-3 text-gray-700 mt-6 font-body">
-            <li className="flex items-start gap-3">
-              <span className="text-accent font-bold">✓</span> Education of
+          </motion.p>
+          <motion.ul className="space-y-3 text-gray-900 mt-6 font-body">
+            <motion.li  variants={item} className="flex items-start gap-3">
+              <span className="text-primary font-bold">✓</span> Education of
               Head, Heart & Hands
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-accent font-bold">✓</span> Balanced Artistic
+            </motion.li>
+            <motion.li  variants={item} className="flex items-start gap-3">
+              <span className="text-primary font-bold">✓</span> Balanced Artistic
               & Academic Learning
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-accent font-bold">✓</span> Development of
+            </motion.li>
+            <motion.li  variants={item} className="flex items-start gap-3">
+              <span className="text-primary font-bold">✓</span> Development of
               Truth, Beauty & Goodness
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
           {/* button */}
-          <button className="bg-accent text-white px-5 py-3 rounded-md font-semibold hover:bg-primary-dark  duration-200 transition mt-6 hover:-translate-y-1 hover:shadow-md cursor-pointer">
+          <button className="bg-primary text-white px-5 py-3 rounded-md font-semibold hover:bg-primary-dark  duration-200 transition mt-6 hover:-translate-y-1 hover:shadow-md cursor-pointer">
             Discover Our Philosophy
           </button>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

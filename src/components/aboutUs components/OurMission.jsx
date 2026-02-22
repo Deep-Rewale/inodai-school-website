@@ -39,7 +39,7 @@ const OurMission = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.3 }}
               whileHover={{ y: -8 }}
-              className="bg-page-bg shadow-2xl rounded-2xl overflow-hidden h-120 hover:bg-primary hover:text-white cursor-pointer text-primary"
+              className="bg-page-bg shadow-2xl rounded-2xl overflow-hidden h-120 hover:bg-primary hover:text-white text-primary"
               key={index}
             >
               {/* images div */}
