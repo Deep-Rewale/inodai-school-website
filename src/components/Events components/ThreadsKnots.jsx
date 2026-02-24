@@ -33,7 +33,7 @@ const imageReveal = {
 
 const ThreadsKnots = () => {
   return (
-    <section className="h-screen w-full relative flex items-center">
+    <section className="min-h-screen w-full relative flex items-center py-20">
       {/* bg image */}
       <div className="absolute  inset-0 -z-10 ">
         <img

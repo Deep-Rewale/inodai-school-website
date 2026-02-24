@@ -1,13 +1,20 @@
 @import "tailwindcss";
+html {
+ scrollbar-width: none;
+ -ms-overflow-style: none;
 
+}
 @layer base {
   body {
-    @apply cursor-none;
+    @apply cursor-none;;
+    
   }
    *, a, button {
     cursor: none !important;
   }
 }
+
+
 :root {
   --color-primary: #3f3c77;
   --color-primary-dark: #2f2c5e;
