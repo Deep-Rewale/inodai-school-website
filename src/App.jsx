@@ -15,36 +15,38 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
 import CustomCursor from "./components/CustomCursor";
+import ScrollToTop from "./components/ScrollToTop";
 
 export const App = () => {
   return (
     // Used React router for routes handling
-   <div className="h-screen w-full">
-   <BrowserRouter>
-   <CustomCursor/>
-    <Navbar />
+    <div className="h-screen w-full">
+      <BrowserRouter>
+        <CustomCursor />
+        <ScrollToTop />
+        <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        <Route path="/about" element={<About />} />
-        <Route path="/board" element={<Board />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/board" element={<Board />} />
 
-        <Route path="/programs" element={<Programs />} />
-        <Route path="/events" element={<Events />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/events" element={<Events />} />
 
-        <Route path="/waldorf-education" element={<WaldorfEducation />} />
-        <Route path="/waldorf-faq" element={<WaldorfFaq />} />
+          <Route path="/waldorf-education" element={<WaldorfEducation />} />
+          <Route path="/waldorf-faq" element={<WaldorfFaq />} />
 
-        <Route path="/playgroup" element={<Playgroup />} />
-        <Route path="/kindergarten" element={<Kindergarten />} />
-        <Route path="/daycare" element={<Daycares />} />
+          <Route path="/playgroup" element={<Playgroup />} />
+          <Route path="/kindergarten" element={<Kindergarten />} />
+          <Route path="/daycare" element={<Daycares />} />
 
-        <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
 
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };

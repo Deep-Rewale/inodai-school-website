@@ -1,5 +1,6 @@
 import { title } from "framer-motion/client";
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import herobg1 from "../../assets/home page/hero-section-img/hero-bg-1.jpg";
 import herobg2 from "../../assets/home page/hero-section-img/hero-bg-2.jpg";
@@ -88,14 +89,16 @@ const Hero = () => {
               >
                 {slides[index].subtite}
               </motion.p>
+              <Link to={"/Programs"}>
               <motion.button
                 initial={{ x: 30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.7 }}
                 className="px-6 py-3 bg-accent rounded-md mt-4 font-semibold hover:bg-primary-dark transition cursor-pointer"
               >
-                Find Courses
+                Find Programs
               </motion.button>
+              </Link>
             </div>
           </div>
         </motion.div>

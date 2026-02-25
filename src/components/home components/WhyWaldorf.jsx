@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import React from "react";
 import whywe from "../../assets/whywe/whywe.jpg";
 import bgImage from "../../assets/whywe/why-bg.png"
@@ -69,9 +70,11 @@ const WhyWaldorf = () => {
             </motion.li>
           </motion.ul>
           {/* button */}
+          <Link to={"/waldorf-education"}>
           <button className="bg-primary text-white px-5 py-3 rounded-md font-semibold hover:bg-primary-dark  duration-200 transition mt-6 hover:-translate-y-1 hover:shadow-md cursor-pointer">
             Discover Our Philosophy
           </button>
+          </Link>
         </motion.div>
       </div>
     </motion.section>
