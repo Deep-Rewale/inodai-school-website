@@ -20,7 +20,7 @@ const details = [
     title: "Programs Offered",
     subTitle:
       "Inodai Waldorf School offers the internationally recognized Steiner Waldorf curriculum.",
-    routes: "/playgroup",
+    routes: "/programs",
     imgIcon: FaRegLightbulb,
   },
   {

@@ -19,7 +19,7 @@ const RealWorldPreparation = () => {
         <div className="relative">
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-primary-soft -translate-x-1/2 rounded-2xl"></div>
 
-          <div className="space-y-28">
+          <div className="space-y-15">
             {/* Intellect */}
             <motion.div
               initial={{ opacity: 0, x: -60 }}

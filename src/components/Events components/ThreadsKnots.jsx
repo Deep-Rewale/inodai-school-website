@@ -33,7 +33,7 @@ const imageReveal = {
 
 const ThreadsKnots = () => {
   return (
-    <section className="min-h-screen w-full relative flex items-center py-20">
+    <section className="min-h-screen w-full relative  grid items-center py-24">
       {/* bg image */}
       <div className="absolute  inset-0 -z-10 ">
         <img
@@ -42,8 +42,11 @@ const ThreadsKnots = () => {
           alt=""
         />
       </div>
+      
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-[#3F3C77]/70 -z-10"></div>
+      {/* heading  */}
+<motion.h1 variants={fadeUp} className="text-center font-heading text-accent text-3xl font-semibold py-5">Parent Engagement Programs</motion.h1>
       {/* grid container */}
       <motion.div
         variants={container}

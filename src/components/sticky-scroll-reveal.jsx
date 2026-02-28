@@ -46,9 +46,9 @@ const StickyScroll = ({ content, contentClassName }) => {
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl ">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div key={item.title + index} className="my-20 relative ">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -83,11 +83,18 @@ const StickyScroll = ({ content, contentClassName }) => {
           contentClassName,
         )}
       >
-        <img
-          src={content[activeCard].image}
-          alt="School stage visual"
-          className="h-full w-full object-cover"
-        />
+        <AnimatePresence mode="wait">
+    <motion.img
+      key={activeCard}
+      src={content[activeCard].image}
+      alt="School stage visual"
+      className="h-full w-full object-cover"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 1.1 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+    />
+  </AnimatePresence>
       </div>
     </motion.div>
   );

@@ -41,6 +41,14 @@ const HomeAway = () => {
           daily rhythm provides a deep sense of security, consistency and
           comfort.
         </motion.p>
+          <motion.p
+          variants={itemVariants}
+          className="font-body leading-relaxed text-gray-700 text-lg"
+        >
+          {" "}
+          Through a steady daily rhythm and warm teacher relationships, children 
+      develop trust, confidence and emotional security in a nurturing environment.
+        </motion.p>
       </motion.div>
     </section>
   );

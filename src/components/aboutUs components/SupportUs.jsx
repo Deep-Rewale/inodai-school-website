@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import QR from "../../assets/About us/support-us/QR.png"
 
 const SupportUs = () => {
   return (
@@ -35,8 +36,9 @@ const SupportUs = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-white p-8 rounded-xl shadow-md border border-gray-100 "
+          className="bg-white p-8 rounded-xl shadow-md border grid md:grid-cols-2 grid-cols-1 gap-4    border-gray-100 items-center "
         >
+          <div>
           <h3 className="text-xl font-semibold text-primary mb-6">
             {" "}
             Bank Details
@@ -68,6 +70,8 @@ const SupportUs = () => {
               <p>ICIC0000011</p>
             </div>
           </div>
+          </div>
+          <div className="Qr"><img src={QR} alt="" /></div>
         </motion.div>
       </div>
     </section>
