@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import ContactHero from "../components/ContactUs/ContactHero";
+import InquiryForm from "../components/Admissions/InquiryForm";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <>
+      <ContactHero />
+      <InquiryForm type="contact" />
+      <Footer />
+    </>
+  );
+};
 
-export default Contact
+export default Contact;

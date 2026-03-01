@@ -34,7 +34,7 @@ const details = [
     title: "Admissions",
     subTitle:
       "The school conducts Orientation Programmes for the prospective parents from the month of October.",
-    routes: "/login",
+    routes: "/admissions",
     imgIcon: PiGraduationCap,
   },
 ];

@@ -12,7 +12,7 @@ import Playgroup from "./pages/Playgroup";
 import Kindergarten from "./pages/Kindergarten";
 import Daycares from "./pages/Daycars";
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
+import Admissions from "./pages/Admissions";
 import Navbar from "./components/Navbar";
 import CustomCursor from "./components/CustomCursor";
 import ScrollToTop from "./components/ScrollToTop";
@@ -44,7 +44,8 @@ export const App = () => {
 
           <Route path="/contact" element={<Contact />} />
 
-          <Route path="/login" element={<Login />} />
+          <Route path="/admissions"  element={<Admissions />} />
+
         </Routes>
       </BrowserRouter>
     </div>

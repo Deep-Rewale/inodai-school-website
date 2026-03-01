@@ -167,7 +167,7 @@ const Navbar = () => {
         {/* RIGHT - ADMISSIONS BUTTON */}
         <div>
           <Link
-            to="/login"
+            to="/admissions"
             className="bg-accent text-white px-5 py-3 rounded-md font-semibold hover:bg-primary-dark  duration-200 transition"
           >
             Admissions
