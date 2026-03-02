@@ -13,6 +13,13 @@ const Navbar = () => {
   const [pagesOpen, setPagesOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
 
+  // mobile states 
+
+const [mobileOpen, setMobileOpen] = useState(false);
+const [mobilePagesOpen, setMobilePagesOpen] = useState(false);
+const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
+const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+
   return (
     <nav className="w-full bg-white shadow-md z-40 fixed top 0  ">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
@@ -178,10 +185,113 @@ const Navbar = () => {
 
           {/* hamburger menu for mobile phones */}
           <div className="md:hidden block">
-            < Hamburger direction="right" />
+            < Hamburger direction="right"  toggled={mobileOpen}
+  toggle={setMobileOpen} />
           </div>
         </div>
       </div>
+
+      <AnimatePresence>
+  {mobileOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.3 }}
+      className="md:hidden bg-white px-6 py-6 space-y-4 shadow-lg"
+    >
+   <Link to="/" onClick={() => setMobileOpen(false)}>Home</Link>
+<Link to="/programs" onClick={() => setMobileOpen(false)}>Programs</Link>
+<Link to="/events" onClick={() => setMobileOpen(false)}>Events</Link>
+
+{/* About Us Accordion */}
+<div>
+  <button
+    onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+    className="w-full text-left font-semibold"
+  >
+    About Us
+  </button>
+
+  <AnimatePresence>
+    {mobileAboutOpen && (
+      <motion.div
+        initial={{ height: 0, opacity: 0 }}
+        animate={{ height: "auto", opacity: 1 }}
+        exit={{ height: 0, opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="pl-4 mt-2 space-y-2 overflow-hidden"
+      >
+        <Link to="/about">About Page</Link>
+        <Link to="/board">Board of Directors</Link>
+      </motion.div>
+    )}
+  </AnimatePresence>
+</div>
+
+
+{/* Explore Waldorf Accordion */}
+<div>
+  <button
+    onClick={() => setMobilePagesOpen(!mobilePagesOpen)}
+    className="w-full text-left font-semibold"
+  >
+    Explore Waldorf
+  </button>
+
+  <AnimatePresence>
+    {mobilePagesOpen && (
+      <motion.div
+        initial={{ height: 0, opacity: 0 }}
+        animate={{ height: "auto", opacity: 1 }}
+        exit={{ height: 0, opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="pl-4 mt-2 space-y-2 overflow-hidden"
+      >
+        <Link to="/waldorf-education">Waldorf Education</Link>
+        <Link to="/waldorf-faq">Waldorf FAQs</Link>
+
+        {/* Nested Programs */}
+<div>
+  <button
+    onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
+    className="w-full text-left"
+  >
+    Programs Offered
+  </button>
+
+  <AnimatePresence>
+    {mobileProgramsOpen && (
+      <motion.div
+        initial={{ height: 0, opacity: 0 }}
+        animate={{ height: "auto", opacity: 1 }}
+        exit={{ height: 0, opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="pl-4 mt-2 space-y-2 overflow-hidden"
+      >
+        <Link to="/playgroup">Playgroup</Link>
+        <Link to="/kindergarten">Kindergarten</Link>
+        <Link to="/daycare">Day Care</Link>
+      </motion.div>
+    )}
+  </AnimatePresence>
+</div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+</div>
+
+<Link to="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+<Link
+  to="/admissions"
+  onClick={() => setMobileOpen(false)}
+  className="block mt-4 bg-accent text-white px-4 py-3 rounded-md text-center font-semibold"
+>
+  Admissions
+</Link>
+    </motion.div>
+  )}
+</AnimatePresence>
     </nav>
   );
 };
