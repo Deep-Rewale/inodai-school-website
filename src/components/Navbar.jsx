@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import svg from "../assets/dropdown-arrow.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { Turn as Hamburger } from 'hamburger-react'
+
+
 
 const Navbar = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -168,10 +171,15 @@ const Navbar = () => {
         <div>
           <Link
             to="/admissions"
-            className="bg-accent text-white px-5 py-3 rounded-md font-semibold hover:bg-primary-dark  duration-200 transition"
+            className="md:block hidden bg-accent text-white px-5 py-3 rounded-md font-semibold hover:bg-primary-dark  duration-200 transition"
           >
             Admissions
           </Link>
+
+          {/* hamburger menu for mobile phones */}
+          <div className="md:hidden block">
+            < Hamburger direction="right" />
+          </div>
         </div>
       </div>
     </nav>
