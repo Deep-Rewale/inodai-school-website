@@ -17,7 +17,7 @@ const itemVariants = {
 
 const MinimalPhilosophicalHero = () => {
   return (
-    <section className="w-full bg-page-bg pt-30 pb-12 flex items-center justify-center p-5 ">
+    <section className="w-full bg-page-bg pt-32 pb-12 flex items-center justify-center px-5">
       <motion.div
         variants={containerVariants}
         initial="hidden"

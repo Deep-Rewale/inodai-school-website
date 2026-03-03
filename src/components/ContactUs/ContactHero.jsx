@@ -12,7 +12,7 @@ const fadeUp = {
 
 const ContactHero = () => {
   return (
-    <section className="w-full bg-page-bg py-28 px-6">
+    <section className="w-full bg-page-bg py-28 px-6 ">
       <motion.div
         initial="hidden"
         whileInView="visible"
