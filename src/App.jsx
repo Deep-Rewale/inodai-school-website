@@ -20,7 +20,7 @@ import ScrollToTop from "./components/ScrollToTop";
 export const App = () => {
   return (
     // Used React router for routes handling
-    <div className="h-screen w-full">
+    <div className=" w-full overflow-x-hidden">
       <BrowserRouter>
         <CustomCursor />
         <ScrollToTop />

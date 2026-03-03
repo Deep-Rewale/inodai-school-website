@@ -3,8 +3,12 @@ import Logo from "../assets/School-logo.png";
 import { Link } from "react-router-dom";
 import svg from "../assets/dropdown-arrow.svg";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Turn as Hamburger } from 'hamburger-react'
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa6";
+
+
 
 
 
@@ -15,10 +19,16 @@ const Navbar = () => {
 
   // mobile states 
 
-const [mobileOpen, setMobileOpen] = useState(false);
-const [mobilePagesOpen, setMobilePagesOpen] = useState(false);
-const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
-const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobilePagesOpen, setMobilePagesOpen] = useState(false);
+  const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+
+  useEffect(() => {
+    if (mobileOpen) { document.body.style.overflow = "hidden"; }
+    else { document.body.style.overflow = "auto"; }
+    return () => { document.body.style.overflow = "auto"; };
+  }, [mobileOpen]);
 
   return (
     <nav className="w-full bg-white shadow-md z-40 fixed top 0  ">
@@ -184,114 +194,116 @@ const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
           </Link>
 
           {/* hamburger menu for mobile phones */}
-          <div className="md:hidden block">
-            < Hamburger direction="right"  toggled={mobileOpen}
-  toggle={setMobileOpen} />
+          <div className="md:hidden block relative z-50 text-primary">
+            < Hamburger direction="right" toggled={mobileOpen}
+              toggle={setMobileOpen} />
           </div>
         </div>
       </div>
 
+
+      {/* mobile nav */}
       <AnimatePresence>
-  {mobileOpen && (
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3 }}
-      className="md:hidden bg-white px-6 py-6 space-y-4 shadow-lg"
-    >
-   <Link to="/" onClick={() => setMobileOpen(false)}>Home</Link>
-<Link to="/programs" onClick={() => setMobileOpen(false)}>Programs</Link>
-<Link to="/events" onClick={() => setMobileOpen(false)}>Events</Link>
+        {mobileOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden overflow-y-auto fixed top-0 pt-12 right-0 h-screen w-full bg-white font-body flex flex-col text-primary py-4 font-semibold   divide-y divide-gray-400  text-lg "
+          >
+            <Link className="py-3 px-7 " to="/" onClick={() => setMobileOpen(false)}>Home</Link>
+            <Link className="py-3 px-7 " to="/programs" onClick={() => setMobileOpen(false)}>Programs</Link>
+            <Link className="py-3 px-7 " to="/events" onClick={() => setMobileOpen(false)}>Events</Link>
 
-{/* About Us Accordion */}
-<div>
-  <button
-    onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-    className="w-full text-left font-semibold"
-  >
-    About Us
-  </button>
+            {/* About Us Accordion */}
+            <div>
+              <button
+                onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                className="w-full text-left font-semibold flex justify-between py-3 px-7 divide- "
+              >
+                About Us  <span>{mobileAboutOpen ? <FaMinus /> : <FaPlus />}</span>
+              </button>
 
-  <AnimatePresence>
-    {mobileAboutOpen && (
-      <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: "auto", opacity: 1 }}
-        exit={{ height: 0, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className="pl-4 mt-2 space-y-2 overflow-hidden"
-      >
-        <Link to="/about">About Page</Link>
-        <Link to="/board">Board of Directors</Link>
-      </motion.div>
-    )}
-  </AnimatePresence>
-</div>
+              <AnimatePresence>
+                {mobileAboutOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="mt-2  overflow-hidden flex flex-col divide-y divide-gray-400 "
+                  >
+                    <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 border-t border-gray-400 " to="/about">About Page</Link>
+                    <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 " to="/board">Board of Directors</Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
 
-{/* Explore Waldorf Accordion */}
-<div>
-  <button
-    onClick={() => setMobilePagesOpen(!mobilePagesOpen)}
-    className="w-full text-left font-semibold"
-  >
-    Explore Waldorf
-  </button>
+            {/* Explore Waldorf Accordion */}
+            <div>
+              <button
+                onClick={() => setMobilePagesOpen(!mobilePagesOpen)}
+                className="w-full text-left font-semibold  flex justify-between  py-3 px-7"
+              >
+                Explore Waldorf <span>{mobilePagesOpen ? <FaMinus /> : <FaPlus />}</span>
+              </button>
 
-  <AnimatePresence>
-    {mobilePagesOpen && (
-      <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: "auto", opacity: 1 }}
-        exit={{ height: 0, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className="pl-4 mt-2 space-y-2 overflow-hidden"
-      >
-        <Link to="/waldorf-education">Waldorf Education</Link>
-        <Link to="/waldorf-faq">Waldorf FAQs</Link>
+              <AnimatePresence>
+                {mobilePagesOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className=" overflow-hidden flex flex-col divide-y divide-gray-600"
+                  >
+                    <Link onClick={() => setMobileOpen(false)} className="py-3 px-7  border-t border-gray-400" to="/waldorf-education">Waldorf Education</Link>
+                    <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 " to="/waldorf-faq">Waldorf FAQs</Link>
 
-        {/* Nested Programs */}
-<div>
-  <button
-    onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
-    className="w-full text-left"
-  >
-    Programs Offered
-  </button>
+                    {/* Nested Programs */}
+                    <div>
+                      <button
+                        onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
+                        className="w-full text-left flex justify-between py-3 px-7"
+                      >
+                        Programs Offered <span>{mobileProgramsOpen ? <FaMinus /> : <FaPlus />}</span>
+                      </button>
 
-  <AnimatePresence>
-    {mobileProgramsOpen && (
-      <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: "auto", opacity: 1 }}
-        exit={{ height: 0, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className="pl-4 mt-2 space-y-2 overflow-hidden"
-      >
-        <Link to="/playgroup">Playgroup</Link>
-        <Link to="/kindergarten">Kindergarten</Link>
-        <Link to="/daycare">Day Care</Link>
-      </motion.div>
-    )}
-  </AnimatePresence>
-</div>
-      </motion.div>
-    )}
-  </AnimatePresence>
-</div>
+                      <AnimatePresence>
+                        {mobileProgramsOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="  overflow-hidden flex flex-col  divide-y divide-gray-400"
+                          >
+                            <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 " to="/playgroup">Playgroup</Link>
+                            <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 " to="/kindergarten">Kindergarten</Link>
+                            <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 " to="/daycare">Day Care</Link>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
-<Link to="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
-<Link
-  to="/admissions"
-  onClick={() => setMobileOpen(false)}
-  className="block mt-4 bg-accent text-white px-4 py-3 rounded-md text-center font-semibold"
->
-  Admissions
-</Link>
-    </motion.div>
-  )}
-</AnimatePresence>
+            <Link className="py-3 px-7" to="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+            <Link
+              to="/admissions"
+              onClick={() => setMobileOpen(false)}
+              className="block mt-4 bg-accent text-white px-4 py-3 mx-4 rounded-md text-center font-semibold"
+            >
+              Admissions
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
