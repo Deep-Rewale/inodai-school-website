@@ -81,7 +81,7 @@ const AboutHero = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="right-text relative mx-auto md:mx-0"
+          className="right-text relative  md:mx-0"
         >
           {journeyData.map((item, index) => (
             <motion.div
