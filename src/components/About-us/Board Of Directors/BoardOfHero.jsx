@@ -1,5 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react'
+import {motion} from "framer-motion"
+
 const containerVariants = {
   hidden: {},
   visible: {
@@ -14,7 +15,8 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-const KinderHero = () => {
+
+const BoardOfHero = () => {
   return (
     <section className="w-full bg-page-bg pt-30 pb-12 flex items-center justify-center p-5 ">
       <motion.div
@@ -27,29 +29,23 @@ const KinderHero = () => {
           variants={itemVariants}
           className="text-accent  text-lg font-body"
         >
-          Early Years Program
+          Leadership & Governance
         </motion.h4>
         <motion.h1
           variants={itemVariants}
           className="text-primary font-bold font-heading text-3xl md:text-4xl"
         >
-          Kindergarten (3–6 Years)
+        Leadership & Governance
         </motion.h1>
         <motion.p
           variants={itemVariants}
           className="max-w-4xl mx-auto text-gray-600 text-base font-body leading-relaxed md:leading-loose"
         >
-          The Kindergarten years from age 3-6 years are characterized in Steiner
-          Waldorf education as being the years when an ethos of 'goodness'
-          should prevail, where children’s good actions and good thoughts can be
-          encouraged. They are also the years when children are sensory beings,
-          where they absorb like sponges all elements, both good and bad, in
-          their environment. The elements they absorb at this time, play an
-          important role in how the children develop in the future.
+       At Inodai Waldorf School, our Board of Directors brings together decades of experience in education, leadership and Waldorf pedagogy. Their vision, dedication and guidance ensure that the school continues to nurture children in a holistic and meaningful way.
         </motion.p>
       </motion.div>
     </section>
-  );
-};
+  )
+}
 
-export default KinderHero;
+export default BoardOfHero

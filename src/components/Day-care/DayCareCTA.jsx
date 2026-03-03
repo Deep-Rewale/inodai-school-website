@@ -23,7 +23,7 @@ const stagger = {
 
 const DayCareCTA = () => {
   return (
-    <section className="py-28 bg-[#F8F9FC] px-6">
+    <section className="py-15 md:py-28 bg-[#F8F9FC] px-6">
   <motion.div
     variants={stagger}
     initial="hidden"

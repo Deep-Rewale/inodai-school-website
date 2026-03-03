@@ -1,7 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion';
-
-
+import React from "react";
+import { motion } from "framer-motion";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -46,12 +44,14 @@ const steps = [
 
 const AdmissionsProcess = () => {
   return (
-     <section className="py-28 bg-white px-6">
-      <motion.div variants={stagger}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true, amount: 0.2 }} className="max-w-5xl mx-auto">
-
+    <section className="py-15 md:py-28 bg-white px-6">
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-5xl mx-auto"
+      >
         <motion.div variants={fadeUp} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading text-primary font-semibold">
             Admission Process
@@ -73,10 +73,9 @@ const AdmissionsProcess = () => {
             </motion.div>
           ))}
         </div>
-
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default AdmissionsProcess
+export default AdmissionsProcess;

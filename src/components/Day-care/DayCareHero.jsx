@@ -1,6 +1,5 @@
-import React from 'react'
-import {motion} from "framer-motion"
-
+import React from "react";
+import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
@@ -18,7 +17,7 @@ const itemVariants = {
 
 const DayCareHero = () => {
   return (
-      <section className="w-full bg-page-bg pt-30 pb-12 flex items-center justify-center p-5 ">
+    <section className="w-full bg-page-bg pt-30 pb-12 flex items-center justify-center p-5 ">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -33,19 +32,21 @@ const DayCareHero = () => {
         </motion.h4>
         <motion.h1
           variants={itemVariants}
-          className="text-primary font-bold font-heading text-4xl"
+          className="text-primary font-bold font-heading text-3xl md:text-4xl"
         >
-         Day Care at Inodai
+          Day Care at Inodai
         </motion.h1>
         <motion.p
           variants={itemVariants}
           className="max-w-4xl mx-auto text-gray-600 text-base font-body leading-relaxed md:leading-loose"
         >
-          A safe, nurturing and loving environment where children can relax, play and grow after school hours — thoughtfully designed to support our parent community.
+          A safe, nurturing and loving environment where children can relax,
+          play and grow after school hours — thoughtfully designed to support
+          our parent community.
         </motion.p>
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default DayCareHero
+export default DayCareHero;

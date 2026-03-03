@@ -75,7 +75,7 @@ const InquiryForm = ({ type }) => {
       !formData.email ||
       !formData.phone ||
       (type === "admission" && (!formData.studentName || !formData.program)) ||
-      (type === "contact" && !formData.subject )
+      (type === "contact" && !formData.subject)
     ) {
       setStatus({ type: "error", message: "Please fill all required fields." });
       return;
@@ -116,7 +116,7 @@ const InquiryForm = ({ type }) => {
     >
       <motion.h2
         variants={fadeUp}
-        className="font-heading font-semibold text-4xl text-primary text-center py-15"
+        className="font-heading font-semibold text-3xl md:text-4xl text-primary text-center py-8 md:py-15"
       >
         {type === "admission" ? "Admission Inquiry" : "Contact Us"}
       </motion.h2>
@@ -126,7 +126,7 @@ const InquiryForm = ({ type }) => {
       >
         {/* LEFT CONTENT */}
         <motion.div variants={slideLeft} className="space-y-6">
-          <h2 className="text-4xl font-heading text-primary leading-snug">
+          <h2 className="text-3xl md:text-4xl font-heading text-primary leading-snug">
             {type === "admission"
               ? "Begin Your Child’s Beautiful Learning Journey"
               : "Get in Touch With Us"}

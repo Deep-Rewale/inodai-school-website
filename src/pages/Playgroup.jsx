@@ -1,9 +1,9 @@
 import React from "react";
-import PlayGroupHero from "../components/playGroup components/playGroupHero";
-import HomeAway from "../components/playGroup components/HomeAway";
-import LearningThroughPlay from "../components/playGroup components/LearningThroughPlay";
-import DraggableCardDemo from "../components/playGroup components/DraggableCardDemo";
-import Footer from "../components/Footer"
+import PlayGroupHero from "../components/Play-Group/playGroupHero";
+import HomeAway from "../components/Play-Group/HomeAway";
+import LearningThroughPlay from "../components/Play-Group/LearningThroughPlay";
+import DraggableCardDemo from "../components/Play-Group/DraggableCardDemo";
+import Footer from "../components/Footer";
 
 const Playgroup = () => {
   return (
@@ -11,7 +11,7 @@ const Playgroup = () => {
       <PlayGroupHero />
       <HomeAway />
       <LearningThroughPlay />
-      <DraggableCardDemo/>
+      <DraggableCardDemo />
       <Footer />
     </>
   );

@@ -4,10 +4,10 @@ import schoolLogo from "../assets/School-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary px-16 py-8 overflow-x-hidden">
-      <div className="max-w-7xl  grid grid-cols-4 text-white mx-auto gap-12">
+    <footer className="bg-primary px-0 lg:px-16 py-8 overflow-x-hidden">
+      <div className="max-w-7xl  grid divide-y  divide-gray-400 lg:divide-none lg:grid-cols-4 text-white mx-auto gap-4 lg:gap-12">
         {/* column 1 */}
-        <div className="column1 space-y-3">
+        <div className="column1 space-y-3 max-lg:px-7 pb-5 lg:pb-0">
           <img className="w-20 rounded-lg" src={schoolLogo} alt="School logo" />
           <h3 className="font-semibold text-xl font-heading">
             Inodai Waldorf School
@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
 
         {/* column 2 */}
-        <div className="column2 space-y-2">
+        <div className="column2 space-y-2 max-lg:px-7  pb-5 lg:pb-0">
           <h4 className="font-semibold text-xl font-heading ">Quick Links</h4>
           <ul className="space-y-2 text-sm leading-relaxed">
             <li>
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
 
         {/* column 3 */}
-        <div className="column3 space-y-2">
+        <div className="column3 space-y-2 max-lg:px-7  pb-5 lg:pb-0">
           <h4 className="font-semibold text-xl font-heading ">Programs</h4>
           <ul className="space-y-2 text-sm leading-relaxed">
             <li>
@@ -68,7 +68,7 @@ const Footer = () => {
           </ul>
         </div>
         {/* column 4 */}
-        <div className="column4 space-y-2">
+        <div className="column4 space-y-2 max-lg:px-7">
           <h4 className="font-semibold text-xl font-heading ">Contact</h4>
           <p className="text-sm leading-relaxed font-body text-gray-200">
             Amba Shanti Chambers, Marol Church Rd,

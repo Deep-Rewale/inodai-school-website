@@ -1,10 +1,10 @@
 import React from "react";
-import Hero from "../components/home components/Hero";
+import Hero from "../components/Home/Hero";
 import { div } from "framer-motion/client";
-import Education from "../components/home components/Education";
-import WhyWaldorf from "../components/home components/WhyWaldorf";
+import Education from "../components/Home/Education";
+import WhyWaldorf from "../components/Home/WhyWaldorf";
 import Footer from "../components/Footer";
-import { TestimonialCloud } from "../components/home components/TestimonialCloud";
+import { TestimonialCloud } from "../components/Home/TestimonialCloud";
 
 const Home = () => {
   return (

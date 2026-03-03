@@ -25,7 +25,7 @@ const CustomCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="customCursor h-8 w-8 fixed z-50 pointer-events-none"
+      className="customCursor h-8 w-8 fixed z-50 pointer-events-none hidden md:block"
     >
       <img src={CustomCur} alt="pencil" />
     </div>

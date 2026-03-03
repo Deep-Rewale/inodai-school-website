@@ -1,7 +1,7 @@
 import React from "react";
-import ThreadsKnots from "../components/Events components/ThreadsKnots";
-import BuildingEvents from "../components/Events components/BuildingEvents.JSX";
-import AnnualSamrasMela from "../components/Events components/AnnualSamrasMela";
+import ThreadsKnots from "../components/Eventss/ThreadsKnots";
+import BuildingEvents from "../components/Eventss/BuildingEvents.JSX";
+import AnnualSamrasMela from "../components/Eventss/AnnualSamrasMela";
 import Footer from "../components/Footer";
 
 const Events = () => {

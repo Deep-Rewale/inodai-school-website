@@ -77,7 +77,7 @@ const fadeUp = {
 
 const KinderGardenExp = () => {
   return (
-    <section className="py-28 bg-[#F8F9FC] px-6">
+    <section className="py-15 md:py-28 bg-[#F8F9FC] px-6">
       <motion.div
         variants={containerStagger}
         initial="hidden"
@@ -145,7 +145,7 @@ const KinderGardenExp = () => {
         {/* 2. CLASSROOM STRUCTURE */}
         {/* ----------------------------- */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
           <motion.div
             variants={slideLeft}
             className="bg-white p-8 rounded-2xl shadow-md space-y-4"
@@ -193,7 +193,7 @@ const KinderGardenExp = () => {
 
         <motion.div
           variants={scaleFade}
-          className="bg-white p-10 rounded-2xl shadow-md text-center space-y-6"
+          className="bg-white p-8 md:p-10 rounded-2xl shadow-md text-center space-y-6"
         >
           <h3 className="text-2xl font-heading text-primary">How We Assess</h3>
 

@@ -25,7 +25,7 @@ const ContactHero = () => {
             <p className="text-accent uppercase tracking-wider text-sm font-body">
               Get in Touch
             </p>
-            <h2 className="text-4xl font-heading text-primary font-semibold mt-3">
+            <h2 className="text-3xl md:text-4xl font-heading text-primary font-semibold mt-3">
               We’d Love to Hear From You
             </h2>
             <p className="text-gray-600 font-body mt-4 leading-relaxed max-w-lg">

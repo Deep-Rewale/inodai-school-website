@@ -232,7 +232,7 @@ const Navbar = () => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="mt-2  overflow-hidden flex flex-col divide-y divide-gray-400 "
+                    className="mt-2 flex flex-col divide-y divide-gray-400 "
                   >
                     <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 border-t border-gray-400 " to="/about">About Page</Link>
                     <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 " to="/board">Board of Directors</Link>

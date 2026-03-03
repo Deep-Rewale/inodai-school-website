@@ -1,8 +1,8 @@
-import React from 'react'
-import BoardOfHero from '../components/aboutUs components/Board Of Directors/BoardOfHero'
-import Directors from '../components/aboutUs components/Board Of Directors/Directors'
-import BoardMembers from '../components/aboutUs components/Board Of Directors/BoardMembers'
-import Footer from "../components/Footer"
+import React from "react";
+import BoardOfHero from "../components/About-us/Board Of Directors/BoardOfHero";
+import Directors from "../components/About-us/Board Of Directors/Directors";
+import BoardMembers from "../components/About-us/Board Of Directors/BoardMembers";
+import Footer from "../components/Footer";
 
 const Board = () => {
   return (
@@ -12,8 +12,7 @@ const Board = () => {
       <BoardMembers />
       <Footer />
     </>
+  );
+};
 
-  )
-}
-
-export default Board
+export default Board;
