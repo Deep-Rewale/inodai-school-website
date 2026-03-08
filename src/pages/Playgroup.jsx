@@ -1,5 +1,5 @@
 import React from "react";
-import PlayGroupHero from "../components/Play-Group/playGroupHero";
+import PlayGroupHero from "../components/Play-Group/PlayGroupHero";
 import HomeAway from "../components/Play-Group/HomeAway";
 import LearningThroughPlay from "../components/Play-Group/LearningThroughPlay";
 import DraggableCardDemo from "../components/Play-Group/DraggableCardDemo";
