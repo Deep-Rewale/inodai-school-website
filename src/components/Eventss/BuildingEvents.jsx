@@ -91,6 +91,8 @@ const BuildingEvents = () => {
                   className="h-110 object-cover w-full "
                   src={item.img}
                   alt="content images"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-5 space-y-2 bg-white rounded-t-2xl -mt-10 relative z-20 ">

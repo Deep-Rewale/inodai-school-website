@@ -104,16 +104,16 @@ export const TestimonialCloud = () => {
           </AnimatePresence>
 
           {/* Buttons */}
-          <div className="flex justify-center gap-6 mt-8">
+          <div className="flex justify-center gap-6 mt-8 ">
             <button
               onClick={prevReview}
-              className="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition flex items-center justify-center cursor-pointer  p-4"
             >
               ←
             </button>
             <button
               onClick={nextReview}
-              className="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition flex items-center justify-center cursor-pointer"
             >
               →
             </button>

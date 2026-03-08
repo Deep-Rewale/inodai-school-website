@@ -98,6 +98,8 @@ const DayCareContent = () => {
             src={DayCare1}
             alt="Daycare environment"
             className="absolute top-0 left-0 w-3/4 h-64 object-cover rounded-2xl shadow-xl"
+            loading="lazy"
+           decoding="async"
           />
 
           <motion.img
@@ -107,6 +109,8 @@ const DayCareContent = () => {
             src={DayCare2}
             alt="Children in daycare"
             className="absolute bottom-0 right-0 w-3/4 h-64 object-cover rounded-2xl shadow-xl border-4 border-white"
+            loading="lazy"
+           decoding="async"
           />
         </div>
       </motion.div>

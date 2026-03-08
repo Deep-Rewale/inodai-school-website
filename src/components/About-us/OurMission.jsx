@@ -50,6 +50,8 @@ const OurMission = () => {
                   className="w-full h-75 object-cover "
                   src={item.MissonImages}
                   alt={item.title}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               {/* content */}

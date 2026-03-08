@@ -54,9 +54,24 @@ const Assessment = () => {
           variants={slideRight}
           className="grid md:grid-cols-2   gap-5"
         >
-          <img src={Img1} className="rounded-2xl shadow-md" />
-          <img src={Img2} className="rounded-2xl shadow-md" />
-          <img src={Img3} className="rounded-2xl shadow-md col-span-2" />
+          <img
+            src={Img1}
+            className="rounded-2xl shadow-md"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={Img2}
+            className="rounded-2xl shadow-md"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src={Img3}
+            className="rounded-2xl shadow-md col-span-2"
+            loading="lazy"
+            decoding="async"
+          />
         </motion.div>
       </motion.div>
     </section>

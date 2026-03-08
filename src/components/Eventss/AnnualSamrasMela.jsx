@@ -114,6 +114,8 @@ const AnnualSamrasMela = () => {
             className="h-90 w-full object-cover rounded-2xl"
             src={img1}
             alt="kids images"
+            loading="lazy"
+            decoding="async"
           />
           <motion.img
             variants={imageVariant}
@@ -125,6 +127,8 @@ const AnnualSamrasMela = () => {
             className="h-90 w-full object-cover rounded-2xl"
             src={img2}
             alt="kids images"
+            loading="lazy"
+            decoding="async"
           />
           <motion.img
             variants={imageVariant}
@@ -136,6 +140,8 @@ const AnnualSamrasMela = () => {
             className="h-90 w-full object-cover rounded-2xl "
             src={img3}
             alt="kids images"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
         {/* small para last */}

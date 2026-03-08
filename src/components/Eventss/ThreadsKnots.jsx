@@ -40,13 +40,20 @@ const ThreadsKnots = () => {
           className="w-full h-full object-cover"
           src={ThreadsKnotsBg}
           alt=""
+          loading="lazy"
+          decoding="async"
         />
       </div>
-      
+
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-[#3F3C77]/70 -z-10"></div>
       {/* heading  */}
-<motion.h1 variants={fadeUp} className="text-center font-heading text-accent text-2xl lg:text-3xl font-semibold py-5">Parent Engagement Programs</motion.h1>
+      <motion.h1
+        variants={fadeUp}
+        className=" block md:hidden text-center font-heading text-accent text-2xl lg:text-3xl font-semibold py-5"
+      >
+        Parent Engagement Programs
+      </motion.h1>
       {/* grid container */}
       <motion.div
         variants={container}
@@ -65,6 +72,8 @@ const ThreadsKnots = () => {
             transition={{ type: "spring", stiffness: 120 }}
             src={ThreadsKnotss}
             alt="Threads & Knots img"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
         {/* right content */}

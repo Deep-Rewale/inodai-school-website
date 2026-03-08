@@ -36,6 +36,8 @@ const OurTeachers = () => {
             className="w-full rounded-2xl shadow-lg object-cover hover:shadow-xl"
             src={OurTeachersImg}
             alt="teachers img"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
         {/* right content */}

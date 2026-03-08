@@ -14,7 +14,7 @@ import Daycares from "./pages/Daycars";
 import Contact from "./pages/Contact";
 import Admissions from "./pages/Admissions";
 import Navbar from "./components/Navbar";
-import CustomCursor from "./components/CustomCursor";
+// import CustomCursor from "./components/CustomCursor";
 import ScrollToTop from "./components/ScrollToTop";
 
 export const App = () => {
@@ -22,7 +22,6 @@ export const App = () => {
     // Used React router for routes handling
     <div className=" w-full overflow-x-hidden">
       <BrowserRouter>
-        <CustomCursor />
         <ScrollToTop />
         <Navbar />
 

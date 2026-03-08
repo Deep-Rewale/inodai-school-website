@@ -216,6 +216,8 @@ const KinderGardenExp = () => {
               className="h-full w-full rounded-2xl shadow-md"
               src={Img1}
               alt="kindergarten Image"
+              loading="lazy"
+              decoding="async"
             />
 
             <motion.img
@@ -223,6 +225,8 @@ const KinderGardenExp = () => {
               className="h-full w-full rounded-2xl shadow-md"
               src={Img2}
               alt="kindergarten Image"
+              loading="lazy"
+              decoding="async"
             />
 
             <motion.img
@@ -230,6 +234,8 @@ const KinderGardenExp = () => {
               className="h-full w-full rounded-2xl shadow-md"
               src={Img3}
               alt="kindergarten Image"
+              loading="lazy"
+              decoding="async"
             />
           </motion.div>
         </div>

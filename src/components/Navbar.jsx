@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import svg from "../assets/dropdown-arrow.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Turn as Hamburger } from 'hamburger-react'
+import { Turn as Hamburger, Rotate } from 'hamburger-react'
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
 
@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-white shadow-md z-40 fixed top 0  ">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 cursor-pointer">
         {/* LEFT - LOGO */}
         <div className="flex items-center">
           <Link to="/" className="cursor-none">
@@ -57,7 +57,7 @@ const Navbar = () => {
           >
             <span className="hover:text-primary-dark transition duration-150">
               <Link className="flex items-center" to="/about">
-                About Us <img className="h-5" src={svg} alt="" />
+                About Us <img className={`h-5  transition ease-in delay-100 ${aboutOpen ? "rotate-180" : "rotate-0"}`} src={svg} alt="" />
               </Link>
             </span>
             <AnimatePresence>
@@ -105,7 +105,7 @@ const Navbar = () => {
           >
             <span className=" flex  items-center  hover:text-primary-dark transition duration-150">
               Explore Waldorf
-              <img className="h-5" src={svg} alt="" />
+              <img className={`h-5  transition ease-in delay-100 ${pagesOpen ? "rotate-180" : "rotate-0"}`} src={svg} alt="" />
             </span>
 
             <AnimatePresence>
@@ -138,7 +138,7 @@ const Navbar = () => {
                     className="relative group/program"
                   >
                     <span className="flex  items-center ">
-                      Programs Offered <img className="h-5" src={svg} alt="" />
+                      Programs Offered <img className={`h-5  transition ease-in delay-100 ${programsOpen ? "rotate-180" : "rotate-0"}`} src={svg} alt="" />
                     </span>
                     <AnimatePresence>
                       {programsOpen && (
@@ -147,7 +147,7 @@ const Navbar = () => {
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 10 }}
                           transition={{ duration: 0.3 }}
-                          className="absolute left-full top-0 hidden group-hover/program:block bg-white shadow-lg rounded-md p-3 w-44 space-y-2 divide-y divide-[#9bcb3b]"
+                          className="mt-2 pl-3 space-y-2 divide-y w-[80%] divide-[#9bcb3b]"
                         >
                           <Link
                             to="/playgroup"
@@ -232,10 +232,10 @@ const Navbar = () => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="mt-2 flex flex-col divide-y divide-gray-400 "
+                    className="mt-2 flex flex-col divide-y divide-gray-400 text-[#3f3c77]/80  "
                   >
-                    <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 border-t border-gray-400 " to="/about">About Page</Link>
-                    <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 " to="/board">Board of Directors</Link>
+                    <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 border-t pl-10 border-gray-400 " to="/about">About Page</Link>
+                    <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 pl-10  " to="/board">Board of Directors</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -258,7 +258,7 @@ const Navbar = () => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className=" overflow-hidden flex flex-col divide-y divide-gray-600"
+                    className=" overflow-hidden flex flex-col divide-y divide-gray-600  text-[#3f3c77]/80"
                   >
                     <Link onClick={() => setMobileOpen(false)} className="py-3 px-7  border-t border-gray-400" to="/waldorf-education">Waldorf Education</Link>
                     <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 " to="/waldorf-faq">Waldorf FAQs</Link>
@@ -267,7 +267,7 @@ const Navbar = () => {
                     <div>
                       <button
                         onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
-                        className="w-full text-left flex justify-between py-3 px-7"
+                        className="w-full text-left flex justify-between py-3 px-7 text-primary"
                       >
                         Programs Offered <span>{mobileProgramsOpen ? <FaMinus /> : <FaPlus />}</span>
                       </button>
@@ -279,7 +279,7 @@ const Navbar = () => {
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="  overflow-hidden flex flex-col  divide-y divide-gray-400"
+                            className="  overflow-hidden flex flex-col  divide-y divide-gray-400 "
                           >
                             <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 " to="/playgroup">Playgroup</Link>
                             <Link onClick={() => setMobileOpen(false)} className="py-3 px-7 " to="/kindergarten">Kindergarten</Link>

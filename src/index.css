@@ -5,15 +5,7 @@ html {
  -ms-overflow-style: none;
 
 }
-@layer base {
-  body {
-    @apply cursor-none;;
-    
-  }
-   *, a, button {
-    cursor: none !important;
-  }
-}
+
 @layer utilities {
   .bg-primary-soft {
     background-color: rgba(63, 60, 119, 0.15);

@@ -50,6 +50,8 @@ const PlayGroupHero = () => {
             className="w-full h-full object-cover rounded-2xl shadow-xl"
             src={playGroup1}
             alt="kids image"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

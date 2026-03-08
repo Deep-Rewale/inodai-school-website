@@ -42,7 +42,7 @@ const details = [
 const Education = () => {
   // full container
   return (
-    <div className=" py-10 mx-auto overflow-x-hidden md:mt-none lg:-mt-30 relative z-10 ">
+    <div className=" py-10 mx-auto overflow-x-hidden md:mt-none lg:-mt-30 relative z-10 text-wrap ">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -55,11 +55,12 @@ const Education = () => {
             },
           },
         }}
-        className="content bg-page-bg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4   xl:w-6xl mx-auto px-6 py-8 lg:px-12 gap-8 lg:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] rounded-md font-body "
+        className="content bg-page-bg  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4   xl:w-6xl mx-auto px-6 py-8 lg:px-12 gap-8 lg:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] rounded-md font-body "
       >
         {/* mapping the items */}
         {details.map((item, index) => {
           const Icons = item.imgIcon;
+
           return (
             // items div
             <motion.div
@@ -70,9 +71,9 @@ const Education = () => {
               }}
               transition={{ duration: 0.6, ease: "backInOut" }}
               whileHover={{ y: -6 }}
-              className="separate-content flex gap-5 text-primary shadow-2xl lg:shadow-none p-8 lg:p-0 rounded-xl border border-gray-300 lg:border-none "
+              className="separate-content  flex gap-5 text-primary shadow-2xl lg:shadow-none p-8 lg:p-0 rounded-xl border border-gray-300 lg:border-none  "
             >
-              <div className="left text-accent ">
+              <div className="left text-accent">
                 <Icons size={40} />
               </div>
               <div className="right  flex flex-col  h-full gap-2 text-left">

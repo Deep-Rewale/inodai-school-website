@@ -32,6 +32,8 @@ const AnthroposophySection = () => {
             transition={{ type: "spring", stiffness: 200 }}
             alt="Anthroposophy Workshop"
             className="rounded-2xl shadow-xl w-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
 
