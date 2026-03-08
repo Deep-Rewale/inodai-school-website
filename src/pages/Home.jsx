@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../components/Home/Hero";
-import { div } from "framer-motion/client";
+// import { div } from "framer-motion/client";
 import Education from "../components/Home/Education";
 import WhyWaldorf from "../components/Home/WhyWaldorf";
 import Footer from "../components/Footer";
