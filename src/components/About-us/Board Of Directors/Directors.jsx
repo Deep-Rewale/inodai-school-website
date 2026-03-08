@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import BinduChowdary from "../../../assets/About us/Board-of-directors/founders/Bindu-chowdary.jpg";
+import BinduChowdary from "../../../assets/About us/Board-of-directors/founders/Bindu-Chowdary.jpg";
 import SeshadriDesikan from "../../../assets/About us/Board-of-directors/founders/Seshadri-Desikan.jpg";
 import ManaliMehta from "../../../assets/About us/Board-of-directors/founders/Manali-Mehta.avif";
-import PadminiSeshadri from "../../../assets/About us/Board-of-directors/founders/Padmini-seshadri.jpg";
+import PadminiSeshadri from "../../../assets/About us/Board-of-directors/founders/Padmini-Seshadri.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 
