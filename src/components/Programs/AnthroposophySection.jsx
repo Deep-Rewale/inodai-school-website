@@ -12,7 +12,7 @@ const fadeUp = {
 };
 const AnthroposophySection = () => {
   return (
-    <section className="w-full bg-white py-10 md:py-28 px-6 ">
+    <section className="w-full bg-white py-10 md:py-14 px-6 ">
       <motion.div
         className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
         initial="hidden"
@@ -58,7 +58,7 @@ const AnthroposophySection = () => {
 
           {/* Highlight Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-            <div className="p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+            <div className="p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition bg-[#f8f9fc]">
               <h3 className="font-heading text-primary text-lg mb-2 font-semibold">
                 Deeper Understanding
               </h3>
@@ -68,7 +68,7 @@ const AnthroposophySection = () => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+            <div className="p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition bg-[#f8f9fc]">
               <h3 className="font-heading text-primary text-lg mb-2 font-semibold">
                 Expert Mentorship
               </h3>
@@ -78,7 +78,7 @@ const AnthroposophySection = () => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition sm:col-span-2">
+            <div className="p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition sm:col-span-2 bg-[#f8f9fc]">
               <h3 className="font-heading text-primary text-lg mb-2 font-semibold">
                 Community Enrichment
               </h3>

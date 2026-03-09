@@ -24,7 +24,7 @@ const members = [
 const BoardMembers = () => {
   const [openIndex, setOpenIndex] = useState(null);
   return (
-    <section className="w-full bg-[#F8F9FC] py-10 md:y-24 px-6">
+    <section className="w-full bg-[#F8F9FC] py-10 md:py-14 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
         <motion.div

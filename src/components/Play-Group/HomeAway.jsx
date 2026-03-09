@@ -16,7 +16,7 @@ const itemVariants = {
 };
 const HomeAway = () => {
   return (
-    <section className="py-18">
+    <section className="py-10">
       <motion.div
         variants={containerVariants}
         initial="hidden"

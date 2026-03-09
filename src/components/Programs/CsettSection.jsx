@@ -13,7 +13,7 @@ const fadeUp = {
 
 const CsettSection = () => {
   return (
-    <section className="w-full bg-[#3F3C77]/5 py-20 px-3">
+    <section className="w-full bg-[#3F3C77]/5 py-12 px-3">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -56,7 +56,7 @@ const CsettSection = () => {
             transition={{ type: "spring", stiffness: 200 }}
             className="bg-white shadow-lg rounded-2xl py-8  "
           >
-            <h3 className="text-3xl font-heading  text-primary font-bold">
+            <h3 className="text-3xl font-heading  text-accent font-bold">
               <Counter end={2010} />
             </h3>
             <p className="mt-2 text-gray-500  ">Established</p>
@@ -67,7 +67,7 @@ const CsettSection = () => {
             transition={{ type: "spring", stiffness: 200 }}
             className="bg-white shadow-lg rounded-2xl py-8"
           >
-            <h3 className="text-3xl font-heading text-primary font-bold">
+            <h3 className="text-3xl font-heading text-accent font-bold">
               <Counter end={30} />+
             </h3>
             <p className="text-gray-500 mt-2">Batches Conducted</p>
@@ -78,7 +78,7 @@ const CsettSection = () => {
             transition={{ type: "spring", stiffness: 200 }}
             className="bg-white shadow-lg rounded-2xl py-8"
           >
-            <h3 className="text-3xl font-heading text-primary font-bold ">
+            <h3 className="text-3xl font-heading text-accent font-bold ">
               <Counter end={20} />+
             </h3>
             <p className="text-gray-500 mt-2">Participants Per Batch</p>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const LearningThroughPlay = () => {
   return (
-    <section className="py-28 bg-page-bg">
+    <section className="py-13 bg-page-bg">
       <div className="max-w-6xl mx-auto px-6 space-y-16">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-heading text-primary">
@@ -18,7 +18,7 @@ const LearningThroughPlay = () => {
         </div>
 
         {/* Gentle Flow Items */}
-        <div className="grid md:grid-cols-4 gap-10 text-center">
+        <div className="grid md:grid-cols-4 gap-10 text-center ">
           {[
             "Storytelling & Music",
             "Outdoor Exploration",
@@ -31,9 +31,9 @@ const LearningThroughPlay = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="bg-white p-8 rounded-2xl shadow-md border border-gray-200"
+              className="bg-accent  p-8 rounded-2xl shadow-md border border-[#9bcb3b]/20"
             >
-              <p className="font-body text-gray-700">{item}</p>
+              <p className="font-body text-white font-semibold">{item}</p>
             </motion.div>
           ))}
         </div>

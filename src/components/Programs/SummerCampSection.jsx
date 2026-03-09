@@ -62,7 +62,7 @@ const SummerCampSection = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-[#9BCB3B]/10 py-15 md:py-28 px-6">
+    <section className="w-full  bg-[#9BCB3B]/10 py-7 md:py-8 px-6">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -88,14 +88,14 @@ const SummerCampSection = () => {
         </motion.p>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 gap-8 pt-8 items-start">
+        <div className="grid grid-cols-1  gap-8 pt-8 items-start">
           {items.map((item, index) => (
             <motion.div
               key={index}
               onClick={() =>
                 setActiveIndex(activeIndex === index ? null : index)
               }
-              className="bg-white p-8 rounded-2xl shadow-md cursor-pointer transition-all h-fit"
+              className="bg-white p-8 rounded-2xl shadow-md cursor-pointer transition-all h-fit border-l-4 border-[#9bcb3b]"
             >
               <div className="mb-4 flex justify-center">{item.icon}</div>
 

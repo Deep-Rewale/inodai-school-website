@@ -4,7 +4,7 @@ import QR from "../../assets/About us/support-us/QR.png"
 
 const SupportUs = () => {
   return (
-    <section className="py-10 md:py-24 ">
+    <section className="py-10 md:py-24 bg-[#f8f9fc] ">
       <div className="grid lg:grid-cols-2 mx-auto max-w-7xl p-8 items-start gap-16">
         {/* left content */}
         <motion.div

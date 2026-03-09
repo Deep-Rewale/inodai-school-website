@@ -59,7 +59,6 @@ const InquiryForm = ({ type }) => {
       ...formData,
       [event.target.name]: event.target.value,
     });
-    console.log(formData);
   };
 
   //  validate email
@@ -112,11 +111,11 @@ const InquiryForm = ({ type }) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={container}
-      className="min-h-screen py-10 bg-white px-6 relative  "
+      className=" py-10 bg-white px-6 relative"
     >
       <motion.h2
         variants={fadeUp}
-        className="font-heading font-semibold text-3xl md:text-4xl text-primary text-center py-8 md:py-15"
+        className="font-heading font-semibold text-3xl md:text-4xl text-primary text-center pb-7 md:pb-10"
       >
         {type === "admission" ? "Admission Inquiry" : "Contact Us"}
       </motion.h2>
@@ -159,7 +158,7 @@ const InquiryForm = ({ type }) => {
                   Student Name *
                 </label>
                 <input
-                  className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400 transition"
+                  className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#9bcb3b]/50 transition"
                   type="text"
                   name="studentName"
                   placeholder="Student Name *"
@@ -174,7 +173,7 @@ const InquiryForm = ({ type }) => {
                 Parent Name *
               </label>
               <input
-                className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400 transition"
+                className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#9bcb3b]/50 transition"
                 type="text"
                 name="parentName"
                 placeholder="Parent Name *"
@@ -189,7 +188,7 @@ const InquiryForm = ({ type }) => {
                 Email *
               </label>
               <input
-                className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400 transition"
+                className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#9bcb3b]/50 transition"
                 type="email"
                 name="email"
                 placeholder="Email Address*"
@@ -204,7 +203,7 @@ const InquiryForm = ({ type }) => {
                 Phone Number *
               </label>
               <input
-                className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-400 transition"
+                className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#9bcb3b]/50 transition"
                 type="tel"
                 name="phone"
                 placeholder="Phone Number *"
@@ -269,7 +268,7 @@ const InquiryForm = ({ type }) => {
                 Additional Message (Optional)
               </label>
               <textarea
-                className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 resize-none focus:ring-gray-400 transition"
+                className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 resize-none focus:ring-[#9bcb3b]/50 transition"
                 name="message"
                 rows="4"
                 value={formData.message}

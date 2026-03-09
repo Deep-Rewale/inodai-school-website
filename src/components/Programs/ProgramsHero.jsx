@@ -17,7 +17,16 @@ const itemVariants = {
 
 const ProgramsHero = () => {
   return (
-    <section className="w-full bg-page-bg pt-30 pb-12 px-3 flex items-center justify-center ">
+    <section className="w-full bg-page-bg pt-25 pb-12 px-3  ">
+      <div className="relative h-100 w-full overflow-hidden flex items-center justify-center rounded-xl mb-8">
+        <img
+          src="https://images.pexels.com/photos/5212687/pexels-photo-5212687.jpeg"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/10" />
+      </div>
+     
       <motion.div
         variants={containerVariants}
         initial="hidden"

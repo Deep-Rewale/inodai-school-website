@@ -30,9 +30,10 @@ const itemVariant = {
 
 const AboutHero = () => {
   return (
-    <div className="bg-page-bg py-7 min-h-screen pt-18 px-3">
+    <div className="bg-page-bg py-7  pt-18 px-3">
+
       {/* header text */}
-      <section className="pt-12 md:pt-25 text-center space-y-3">
+      <section className="pt-9 md:pt-10 text-center space-y-3">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,7 +53,7 @@ const AboutHero = () => {
         </motion.p>
       </section>
       {/* journey content */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-7xl mx-auto px-6  items-center mt-20">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto px-6  items-center mt-10">
         {/* left text */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}

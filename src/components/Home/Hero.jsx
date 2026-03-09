@@ -69,7 +69,7 @@ const Hero = () => {
             alt="Education That Liberates"
           />
           {/* dark overlay */}
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/10"></div>
           {/* text content */}
           <div className="absolute inset-0 flex items-center">
             <div className=" mx-5 md:mx-30 text-white">
@@ -94,7 +94,7 @@ const Hero = () => {
                 initial={{ x: 30, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.7 }}
-                className=" px-4 py-3 md:px-6 md:py-3 bg-accent rounded-md mt-4 font-semibold hover:bg-primary-dark transition cursor-pointer"
+                className=" px-4 py-3 md:px-6 md:py-3 bg-primary rounded-md mt-4 font-semibold hover:bg-primary-dark transition cursor-pointer"
               >
                 Find Programs
               </motion.button>

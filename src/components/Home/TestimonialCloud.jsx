@@ -45,7 +45,7 @@ export const TestimonialCloud = () => {
   };
 
   return (
-        <section className=" py-3 md:py-24 relative overflow-hidden bg-white">
+        <section className="bg-[#f8f9fc] py-3 md:py-16 relative overflow-hidden">
       <div className="max-w-5xl mx-auto py-none md:px-6 md:py-18 text-center relative">
 
         {/* Cloud Background */}

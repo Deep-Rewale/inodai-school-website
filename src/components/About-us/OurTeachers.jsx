@@ -22,9 +22,9 @@ const item = {
 
 const OurTeachers = () => {
   return (
-    <section className=" bg-white min-h-screen  px-8 ">
+    <section className=" bg-white py-6  px-8 ">
       {/* main container */}
-      <div className="max-w-7xl grid grid-cols-1 lg:grid-cols-2 items-center py-24 mx-auto gap-10 md:gap-15">
+      <div className="max-w-7xl grid grid-cols-1 lg:grid-cols-2 items-center py-10 mx-auto gap-10 md:gap-15">
         {/* left image */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}

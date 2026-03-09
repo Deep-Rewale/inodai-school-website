@@ -73,7 +73,7 @@ const OurVision = () => {
             <motion.div
               key={index}
               variants={item}
-              className="p-8 border border-gray-100 rounded-xl shadow-lg  text-left cursor-pointer"
+              className="p-8 border border-gray-100 rounded-xl shadow-lg  text-left cursor-pointer bg-white"
             >
               <h3 className="text-primary text-xl mb-4 font-semibold">
                 {itemData.title}

@@ -44,7 +44,7 @@ const steps = [
 
 const AdmissionsProcess = () => {
   return (
-    <section className="py-15 md:py-28 bg-white px-6">
+    <section className="py-13 md:py-14 bg-white px-6">
       <motion.div
         variants={stagger}
         initial="hidden"
@@ -52,13 +52,13 @@ const AdmissionsProcess = () => {
         viewport={{ once: true, amount: 0.2 }}
         className="max-w-5xl mx-auto"
       >
-        <motion.div variants={fadeUp} className="text-center mb-16">
+        <motion.div variants={fadeUp} className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-heading text-primary font-semibold">
             Admission Process
           </h2>
         </motion.div>
 
-        <div className="relative border-l-2 border-[#9bcb3b] pl-10 space-y-14">
+        <div className="relative border-l-2 border-[#9bcb3b] pl-10 space-y-10">
           {steps.map((step, index) => (
             <motion.div variants={fadeUp} key={index} className="relative">
               <span className="absolute -left-[21px] top-2 w-2 h-2 bg-primary rounded-full"></span>

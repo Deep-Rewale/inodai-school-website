@@ -3,7 +3,7 @@ import React from "react";
 
 const WhatIsWaldorf = () => {
   return (
-    <section className="py-15 md:py-24 mx-auto max-w-6xl p-6 ">
+    <section className="py-13 md:py-14 mx-auto max-w-6xl p-6 ">
       {/* main div */}
       <div className="main-container grid md:grid-cols-3 grid-cols-1 items-start gap-12">
         {/* left text */}

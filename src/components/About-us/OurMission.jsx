@@ -24,7 +24,7 @@ const missionData = [
 
 const OurMission = () => {
   return (
-    <section className="py-15 lg:py-24 bg-white px-7">
+    <section className="py-15 lg:py-16 bg-white px-7">
       {/* mid title */}
       <div className="max-w-7xl text-center mx-auto">
         <h2 className="text-3xl lg:text-4xl font-heading text-primary font-semibold mb-6">

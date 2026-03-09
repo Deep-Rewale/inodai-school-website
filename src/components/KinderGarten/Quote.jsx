@@ -21,7 +21,7 @@ const fadeUp = {
 
 const Quote = () => {
   return (
-    <section className="py-15 md:py-28 bg-white px-6">
+    <section className="py-12 md:py-14 bg-white px-6">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -32,7 +32,7 @@ const Quote = () => {
         {/* LEFT - Quote Card */}
         <motion.div
           variants={fadeUp}
-          className="bg-[#F8F9FC] p-10 rounded-2xl shadow-md"
+          className="bg-[#F8F9FC] p-10 rounded-2xl shadow-md border-l-4 border-[#9bcb3b]"
         >
           <p className="text-2xl md:text-3xl font-heading text-primary leading-snug">
             “Pushing skills before children are biologically ready sets them up

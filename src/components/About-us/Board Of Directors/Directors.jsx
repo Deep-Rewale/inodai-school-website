@@ -54,8 +54,8 @@ const Directors = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-10 md:py-24">
-      <div className="max-w-7xl mx-auto p-6 space-y-24">
+    <section className="py-10 md:py-14">
+      <div className="max-w-7xl mx-auto p-6 space-y-14">
         {directors.map((item, index) => {
           const isReversed = index % 2 !== 0;
           return (
@@ -65,12 +65,12 @@ const Directors = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               key={index}
-              className={`grid md:grid-cols-2 grid-cols-1 gap-10 items-center  ${isReversed ? "md:[&>*:first-child]:order-2" : ""}`}
+              className={`grid md:grid-cols-2 grid-cols-1 gap-10 items-center bg-white rounded-2xl shadow-sm border border-gray-100 p-6  ${isReversed ? "md:[&>*:first-child]:order-2" : ""}`}
             >
               {/* director image */}
               <div className="rounded-2xl overflow-hidden shadow-lg ">
                 <img
-                  className="w-full h-[480px] object-cover"
+                  className="w-full h-[400px] object-cover"
                   src={item.image}
                   alt={item.name}
                 />

@@ -77,13 +77,13 @@ const fadeUp = {
 
 const KinderGardenExp = () => {
   return (
-    <section className="py-15 md:py-28 bg-[#F8F9FC] px-6">
+    <section className="py-13 md:py-14 bg-[#F8F9FC] px-6">
       <motion.div
         variants={containerStagger}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.15 }}
-        className="max-w-7xl mx-auto space-y-20"
+        className="max-w-7xl mx-auto space-y-14"
       >
         {/* SECTION TITLE */}
         <motion.div variants={fadeUp} className="text-center space-y-4">
@@ -120,7 +120,7 @@ const KinderGardenExp = () => {
 
           <motion.div
             variants={slideRight}
-            className="bg-white p-8 rounded-2xl shadow-md"
+            className="bg-white p-8 rounded-2xl shadow-md border border-[#9bcb3b]/20"
           >
             <motion.ul
               variants={containerStagger}
@@ -148,7 +148,7 @@ const KinderGardenExp = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
           <motion.div
             variants={slideLeft}
-            className="bg-white p-8 rounded-2xl shadow-md space-y-4"
+            className="bg-white p-8 rounded-2xl shadow-md space-y-4 border border-[#9bcb3b]/20"
           >
             <h3 className="text-2xl font-heading text-primary">
               Mixed Age Classrooms
@@ -203,13 +203,13 @@ const KinderGardenExp = () => {
             understand each child's unique progress.
           </p>
         </motion.div>
-        <div className="py-10">
+        <div className="py-4">
           <motion.div
             variants={imageStagger}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 overflow-hidden"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 overflow-hidden"
           >
             <motion.img
               variants={imageReveal}
@@ -222,7 +222,7 @@ const KinderGardenExp = () => {
 
             <motion.img
               variants={imageReveal}
-              className="h-full w-full rounded-2xl shadow-md"
+              className="h-full w-full rounded-2xl shadow-md "
               src={Img2}
               alt="kindergarten Image"
               loading="lazy"
@@ -231,7 +231,7 @@ const KinderGardenExp = () => {
 
             <motion.img
               variants={imageReveal}
-              className="h-full w-full rounded-2xl shadow-md"
+              className="h-full w-full rounded-2xl shadow-md "
               src={Img3}
               alt="kindergarten Image"
               loading="lazy"

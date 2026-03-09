@@ -45,7 +45,7 @@ const imageVariant = {
 
 const AnnualSamrasMela = () => {
   return (
-    <section className="min-h-screen relative flex items-center py-18 border border-b-gray-500 ">
+    <section className=" relative flex items-center py-16 border border-b-gray-500 ">
       {/* bg image */}
       <div className="absolute  inset-0 -z-10 ">
         <img

@@ -17,7 +17,7 @@ const fadeUp = {
 
 const AfterSchool = () => {
   return (
-    <section className="w-full bg-white py-13 md:py-28 px-6">
+    <section className="w-full bg-white py-10 md:py-14 px-6">
       <motion.div
         className="max-w-6xl mx-auto space-y-16"
         initial="hidden"
@@ -87,7 +87,7 @@ const AfterSchool = () => {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="relative overflow-hidden rounded-xl shadow-sm group"
+                className={`relative overflow-hidden rounded-xl shadow-sm group ${index === 4 ? "sm:col-span-2" : ""}`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >

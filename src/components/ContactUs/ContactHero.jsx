@@ -12,7 +12,7 @@ const fadeUp = {
 
 const ContactHero = () => {
   return (
-    <section className="w-full bg-page-bg py-28 px-6 ">
+    <section className="w-full bg-page-bg py-30 px-6 ">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -35,7 +35,7 @@ const ContactHero = () => {
           </div>
 
           {/* Contact Details */}
-          <div className="space-y-6 font-body text-gray-700">
+          <div className="space-y-6 font-body text-gray-700 bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
             <div>
               <h4 className="text-primary font-semibold text-lg mb-1">
                 Our Location
@@ -65,7 +65,7 @@ const ContactHero = () => {
               href="https://maps.app.goo.gl/N3QRTMPU7F4mFuwZ6"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-4 bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-dark transition"
+              className="inline-block mt-4 bg-accent text-white px-6 py-3 rounded-lg font-medium  transition"
             >
               Get Directions
             </a>

@@ -7,7 +7,7 @@ import { IoHandLeftOutline } from "react-icons/io5";
 const lineVariant = {
   hidden: { height: 0 },
   visible: {
-    height: "80%",
+    height: "70%",
     transition: { duration: 4, ease: "easeInOut" },
   },
 };
@@ -32,10 +32,10 @@ const rightCard = {
 
 const WholeChild = () => {
   return (
-    <section className="relative py-13 md:py-28 bg-white">
+    <section className="relative py-10 md:py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Heading */}
-        <div className="text-center mb-20 space-y-4">
+        <div className="text-center mb-10 space-y-4">
           <p className="text-accent uppercase tracking-wider text-base font-body">
             Education of the Whole Child
           </p>
@@ -53,14 +53,14 @@ const WholeChild = () => {
           className="absolute left-1/2 top-52 bottom-20 w-[2px] bg-gray-200 -translate-x-1/2 hidden md:block"
         ></motion.div>
 
-        <div className="md:space-y-24 space-y-10 relative">
+        <div className="md:space-y-0 space-y-6 relative">
           {/* HEAD */}
           <motion.div
             variants={leftCard}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="md:grid md:grid-cols-2 items-center gap-12 relative"
+            className="md:grid md:grid-cols-2 items-center gap-12 relative md:min-h-[200px]"
           >
             <div className="md:text-right border border-gray-200 p-5 rounded-2xl md:shadow-2xl shadow-lg">
               <motion.h3  whileHover={{
@@ -91,7 +91,7 @@ const WholeChild = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="md:grid md:grid-cols-2 items-center gap-12 relative"
+            className="md:grid md:grid-cols-2 items-center gap-12 relative md:min-h-[200px]"
           >
             <div></div>
 
@@ -121,7 +121,7 @@ const WholeChild = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="md:grid md:grid-cols-2 items-center gap-12 relative"
+            className="md:grid md:grid-cols-2 items-center gap-12 relative md:min-h-[200px]"
           >
             <div className="md:text-right  border border-gray-200 p-5 rounded-2xl md:shadow-2xl shadow-lg">
               <motion.h3  whileHover={{

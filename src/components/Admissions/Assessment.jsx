@@ -24,7 +24,7 @@ const slideRight = {
 
 const Assessment = () => {
   return (
-    <section className="py-15 bg-page-bg min-h-screen flex items-center">
+    <section className="py-14 bg-page-bg flex items-center">
       <motion.div
         initial="hidden"
         whileInView="visible"

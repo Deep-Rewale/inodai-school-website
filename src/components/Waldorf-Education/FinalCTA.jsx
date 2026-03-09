@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const FinalCTA = () => {
   return (
-     <section className="relative py-13 md:py-32 bg-[#F4F3FB] overflow-hidden">
+     <section className="relative py-10 md:py-16 bg-[#F4F3FB] overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 text-center">
 
         <motion.div

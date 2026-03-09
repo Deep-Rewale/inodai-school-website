@@ -5,7 +5,7 @@ import React from "react";
 const PlayGroupHero = () => {
   return (
     // full section
-    <section className="min-h-screen bg-page-bg relative flex items-center py-24">
+    <section className=" bg-page-bg relative flex items-center py-24">
       {/* main container */}
       <div className="grid md:grid-cols-2 grid-cols-1 items-center max-w-7xl mx-auto gap-16 p-6">
         {/* left text */}

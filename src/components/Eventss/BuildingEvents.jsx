@@ -45,7 +45,7 @@ const details = [
 ];
 const BuildingEvents = () => {
   return (
-    <section className="bg-page-bg min-h-screen w-full py-18  flex items-center ">
+    <section className="bg-page-bg w-full py-16  flex items-center ">
       <div className="max-w-5xl mx-auto">
         {/* centered heading */}
         <motion.div

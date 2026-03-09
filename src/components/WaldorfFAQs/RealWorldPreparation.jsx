@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const RealWorldPreparation = () => {
   return (
-    <section className="py-32 bg-white relative">
+    <section className="py-16 bg-white relative">
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-24 space-y-4">
+        <div className="text-center mb-12 space-y-4">
           <p className="text-accent uppercase tracking-wider text-sm font-body">
             Life Preparation
           </p>
@@ -79,7 +79,7 @@ const RealWorldPreparation = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="text-center mt-28 max-w-3xl mx-auto"
+          className="text-center mt-12 max-w-3xl mx-auto"
         >
           <p className="text-xl font-heading text-primary leading-relaxed">
             Waldorf Education seeks to cultivate whole human beings - capable in

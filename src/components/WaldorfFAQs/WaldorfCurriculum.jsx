@@ -47,7 +47,7 @@ const content = [
 ];
 const WaldorfCurriculum = () => {
   return (
-    <section className="py-15 md:py-24 bg-page-bg">
+    <section className="py-13 md:py-14 bg-page-bg">
       <div className="max-w-7xl mx-auto p-6">
         {/* header */}
         <div className="text-center max-w-3xl mx-auto space-y-5 mb-8">
@@ -71,7 +71,7 @@ const WaldorfCurriculum = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             key={index}
-            className={`rounded-3xl shadow-lg p-7 md:p-10 mb-10 ${item.bg}`}
+            className={`rounded-3xl shadow-lg p-7 md:p-10 mb-8 ${item.bg}`}
           >
             <h3 className="text-primary font-heading text-2xl font-semibold mb-6">
               {item.title}
