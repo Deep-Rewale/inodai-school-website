@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import schoolLogo from "../assets/School-logo.png";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa"
+import FooterLogo from "../assets/Footer/footer-log.png"
+
+
 
 const Footer = () => {
   return (
@@ -70,19 +75,26 @@ const Footer = () => {
         {/* column 4 */}
         <div className="column4 space-y-2 max-lg:px-7">
           <h4 className="font-semibold text-xl font-heading ">Contact</h4>
-          <p className="text-sm leading-relaxed font-body text-gray-200">
+          <p className="text-sm leading-relaxed font-body  text-gray-200">
             Amba Shanti Chambers, Marol Church Rd,
             <br />
             Bori Colony, Vijay Nagar Colony West, Marol,
             <br />
             Andheri East, Mumbai 400 059. <br />
             +91 98198 55336 <br />
-            contactus@inodai.com
-          </p>
+            Enquiries : contactus@inodai.com <br />
+            Admissions : admissions@inodai.com  </p>
         </div>
       </div>
-      <div className="border-t border-white/20 mt-12 pt-3 text-center text-sm text-gray-300">
-        ©{new Date().getFullYear()} Inodai Waldorf School. All rights reserved.
+      <div className="max-md:flex-col max-md:space-y-2  border-t border-white/20 mt-12 pt-3 text-center text-sm text-gray-300 flex justify-around">
+       <p>©{new Date().getFullYear()} Inodai Waldorf School. All rights reserved.</p> 
+       <p className="capitalize">Developed and designed by <a href="https://tekunik.in/" target="_blank" className="font-bold">tekunik</a></p>
+       <div className="quick-links flex gap-3 items-center max-md:flex-col">
+        <a href="https://www.inodai.com/wall.html" target="_blank"><img className="w-40" src={FooterLogo} alt="footer logo"/></a>
+        <div className="flex gap-3"><a href="https://www.facebook.com/InodaiWaldorf" target="_blank"><FaFacebook size={25} /></a>
+        <a href="https://www.instagram.com/inodai_waldorf_school?igsh=MTN5eHIwMDhjM3lnNA==" target="_blank"><FaInstagram size={25} /></a>
+        </div>
+       </div>
       </div>
     </footer>
   );

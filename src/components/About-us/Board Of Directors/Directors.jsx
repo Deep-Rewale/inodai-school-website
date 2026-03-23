@@ -35,7 +35,7 @@ const directors = [
   {
     name: "Manali Mehta",
     role: "Founder Director",
-    image: ManaliMehta,
+    image: "",
     short:
       "A science graduate with a B.Ed., Manali Mehta has extensive experience in high school education and preschool leadership.",
     full: "She has organized and conducted numerous sessions on Waldorf education and continues to contribute to early childhood development initiatives within the school community.",

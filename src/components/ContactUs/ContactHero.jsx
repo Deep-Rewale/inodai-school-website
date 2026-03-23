@@ -62,7 +62,7 @@ const ContactHero = () => {
 
             {/* Direction Button */}
             <a
-              href="https://maps.app.goo.gl/N3QRTMPU7F4mFuwZ6"
+              href="https://maps.app.goo.gl/pYGYPn12XhA3NsjK6"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-4 bg-accent text-white px-6 py-3 rounded-lg font-medium  transition"
@@ -79,7 +79,7 @@ const ContactHero = () => {
         >
           <iframe
             title="Inodai Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.935376373297!2d72.87164897595865!3d19.110490750887458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c90042b4ddb7%3A0x4b2c553d761f94bf!2sAmba%20Shanti%20Chambers!5e0!3m2!1sen!2sus!4v1772380759692!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9377861173166!2d72.87169517418499!3d19.110385050894145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9cfa76f1cb7%3A0x9f48a6f6f046d642!2sInodai%20Waldorf%20School!5e0!3m2!1sen!2sin!4v1774254978263!5m2!1sen!2sin"
             className="w-full h-[450px] border-0"
             loading="lazy"
           ></iframe>
