@@ -86,9 +86,9 @@ const Footer = () => {
             Admissions : admissions@inodai.com  </p>
         </div>
       </div>
-      <div className="max-md:flex-col max-md:space-y-2  border-t border-white/20 mt-12 pt-3 text-center text-sm text-gray-300 flex justify-around">
-       <p>©{new Date().getFullYear()} Inodai Waldorf School. All rights reserved.</p> 
+      <div className="max-md:flex-col max-md:space-y-2  border-t border-white/20 mt-12 pt-3 text-center text-sm text-gray-300 flex justify-around"> 
        <p className="capitalize">Developed and designed by <a href="https://tekunik.in/" target="_blank" className="font-bold">tekunik</a></p>
+        <p>©{new Date().getFullYear()} Inodai Waldorf School. All rights reserved.</p>
        <div className="quick-links flex gap-3 items-center max-md:flex-col">
         <a href="https://www.inodai.com/wall.html" target="_blank"><img className="w-40" src={FooterLogo} alt="footer logo"/></a>
         <div className="flex gap-3"><a href="https://www.facebook.com/InodaiWaldorf" target="_blank"><FaFacebook size={25} /></a>

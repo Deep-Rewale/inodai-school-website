@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Bars } from 'react-loading-icons'
 
 const slideLeft = {
   hidden: { opacity: 0, x: -60 },
@@ -52,6 +53,7 @@ const InquiryForm = ({ type }) => {
   // or submit status
 
   const [status, setStatus] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   //  function for handling the changes
   const handleChanges = (event) => {
@@ -66,8 +68,16 @@ const InquiryForm = ({ type }) => {
     return /\S+@\S+\.\S+/.test(email);
   };
   // prevent reloading the page
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
+    setLoading(true);
+
+    setStatus({ type: "loading", message: "Submitting form..." });
+
+    //  for delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
 
     if (
       !formData.parentName ||
@@ -77,6 +87,7 @@ const InquiryForm = ({ type }) => {
       (type === "contact" && !formData.subject)
     ) {
       setStatus({ type: "error", message: "Please fill all required fields." });
+      setLoading(false)
       return;
     }
     if (!ValidateEmail(formData.email)) {
@@ -84,22 +95,48 @@ const InquiryForm = ({ type }) => {
         type: "error",
         message: "Please enter a valid email address",
       });
+
+      setLoading(false)
       return;
     }
 
-    console.log(formData);
-    setStatus({ type: "success", message: "Inquiry submitted successfully!" });
+    try {
+      const res = await fetch("http://localhost:5000/api/form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          type: type
+        })
+      })
 
-    // reset form data
 
-    setFormData({
-      studentName: "",
-      parentName: "",
-      email: "",
-      phone: "",
-      program: "",
-      message: "",
-    });
+      const data = await res.json();
+      console.log("Backend respone", data)
+
+      setStatus({ type: "success", message: "Inquiry submitted successfully!" });
+
+
+      // reset form data
+
+      setFormData({
+        studentName: "",
+        parentName: "",
+        email: "",
+        phone: "",
+        program: "",
+        message: "",
+      });
+
+
+    } catch (error) {
+      console.log(error)
+      setStatus({ type: "error", message: "something wents wrong, try submiting" })
+    } finally {
+      setLoading(false)
+    }
 
     // message disappear after 3 seconds
     setTimeout(() => setStatus(null), 3000);
@@ -206,6 +243,7 @@ const InquiryForm = ({ type }) => {
                 className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#9bcb3b]/50 transition"
                 type="tel"
                 name="phone"
+                maxLength={"10"}
                 placeholder="Phone Number *"
                 onChange={handleChanges}
                 value={formData.phone}
@@ -277,14 +315,16 @@ const InquiryForm = ({ type }) => {
             </motion.div>
 
             <motion.button
+
               variants={fadeUp}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="md:col-span-2 bg-primary text-white py-3 rounded-lg 
-               hover:opacity-90 transition font-medium"
+               hover:opacity-90 transition font-medium flex justify-center items-center cursor-pointer"
               type="submit"
+              disabled={loading}
             >
-              Submit Inquiry
+              {loading ? <Bars className="h-6" /> : "Submit Inquiry"}
             </motion.button>
           </motion.form>
         </motion.div>
