@@ -243,6 +243,7 @@ const InquiryForm = ({ type }) => {
                 className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#9bcb3b]/50 transition"
                 type="tel"
                 name="phone"
+                minLength={"10"}
                 maxLength={"10"}
                 placeholder="Phone Number *"
                 onChange={handleChanges}

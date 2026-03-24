@@ -3,11 +3,23 @@ const cors = require("cors");
 const mongoose = require("mongoose")
 const Form = require("./models/form")
 const dns = require("dns");
+const { google } = require("googleapis")
 
 // change the dns
 dns.setServers(["1.1.1.1", "8.8.8.8"])
 require("dotenv").config();
 const app = express();
+
+// auth for google apis
+
+const auth = new google.auth.GoogleAuth({
+    keyFile: "credentials.json",
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+})
+
+const sheets = google.sheets({ version: "v4", auth });
+
+
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB Connected"))
@@ -24,7 +36,39 @@ app.post("/api/form", async (req, res) => {
     try {
         const newForm = new Form(req.body)
         await newForm.save()
-        res.json({ message: "Saved ✅" });
+
+        const {
+            type,
+            studentName,
+            parentName,
+            email,
+            phone,
+            program,
+            subject,
+            message,
+        } = req.body;
+
+        await sheets.spreadsheets.values.append({
+            spreadsheetId: "11cEnuq1kZjhEwB3E-SGVGLAd4yoCjikpaqrhTY2aO3Y",
+            range: "Sheet1!A1",
+            valueInputOption: "USER_ENTERED",
+            resource: {
+                values: [[
+                    new Date().toLocaleString(),
+                    type,
+                    studentName,
+                    parentName,
+                    email,
+                    phone,
+                    program,
+                    subject,
+                    message,
+                ]]
+
+            }
+        })
+
+        res.json({ message: "Saved " });
     } catch {
         res.status(500).json({ error: "error while saving data" })
     }
