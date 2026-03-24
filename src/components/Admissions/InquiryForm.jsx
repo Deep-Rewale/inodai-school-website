@@ -101,7 +101,7 @@ const InquiryForm = ({ type }) => {
     }
 
     try {
-      const res = await fetch("/api/form", {
+      const res = await fetch("https://inodai-school-website.onrender.com/api/form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
