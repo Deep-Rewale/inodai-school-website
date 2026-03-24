@@ -10,6 +10,8 @@ dns.setServers(["1.1.1.1", "8.8.8.8"])
 require("dotenv").config();
 const app = express();
 
+const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
+
 // auth for google apis
 
 const auth = new google.auth.GoogleAuth({
@@ -49,7 +51,7 @@ app.post("/api/form", async (req, res) => {
         } = req.body;
 
         await sheets.spreadsheets.values.append({
-            spreadsheetId: "11cEnuq1kZjhEwB3E-SGVGLAd4yoCjikpaqrhTY2aO3Y",
+            spreadsheetId: SPREADSHEET_ID,
             range: "Sheet1!A1",
             valueInputOption: "USER_ENTERED",
             resource: {
