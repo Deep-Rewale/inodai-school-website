@@ -11,6 +11,8 @@ require("dotenv").config();
 const app = express();
 
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
+const URL_ACCESS = process.env.URL_ACCESS;
+const PORT = process.env.PORT || 5000;
 
 // auth for google apis
 
@@ -27,7 +29,10 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.log(err))
 
-app.use(cors());
+app.use(cors({
+  origin: URL_ACCESS
+}));
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -76,6 +81,6 @@ app.post("/api/form", async (req, res) => {
     }
 })
 
-app.listen(5000, () => {
-    console.log("server running on port 5000")
+app.listen(PORT, () => {
+    console.log(`server running on port ${PORT}`)
 })
