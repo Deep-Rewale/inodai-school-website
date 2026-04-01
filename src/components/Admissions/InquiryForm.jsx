@@ -198,6 +198,7 @@ const InquiryForm = ({ type }) => {
                   className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#9bcb3b]/50 transition"
                   type="text"
                   name="studentName"
+                  maxLength={50}
                   placeholder="Student Name *"
                   onChange={handleChanges}
                   value={formData.studentName}
@@ -213,6 +214,7 @@ const InquiryForm = ({ type }) => {
                 className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#9bcb3b]/50 transition"
                 type="text"
                 name="parentName"
+                maxLength={50}
                 placeholder="Parent Name *"
                 onChange={handleChanges}
                 value={formData.parentName}
@@ -326,6 +328,7 @@ const InquiryForm = ({ type }) => {
                 className="border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:ring-1 resize-none focus:ring-[#9bcb3b]/50 transition"
                 name="message"
                 rows="4"
+                maxLength={500}
                 value={formData.message}
                 onChange={handleChanges}
               />{" "}
