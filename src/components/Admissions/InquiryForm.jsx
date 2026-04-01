@@ -246,6 +246,22 @@ const InquiryForm = ({ type }) => {
                 minLength={"10"}
                 maxLength={"10"}
                 placeholder="Phone Number *"
+                 onKeyDown={(e) => {
+    // Allow control keys
+    if (
+      e.key === "Backspace" ||
+      e.key === "Delete" ||
+      e.key === "ArrowLeft" ||
+      e.key === "ArrowRight" ||
+      e.key === "Tab"
+    ) return;
+
+    // Block non-numbers
+    if (!/^[0-9]$/.test(e.key)) {
+      e.preventDefault();
+    }
+  }}
+
                 onChange={handleChanges}
                 value={formData.phone}
               />
